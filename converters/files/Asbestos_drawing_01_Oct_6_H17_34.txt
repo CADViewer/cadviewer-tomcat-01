@@ -1,0 +1,1 @@
+/xampp/tomcat/webapps/cadviewer/converters/pdf_converter/run_mergebitmapinpdf.bat /xampp/tomcat/webapps/cadviewer/converters/pdf_converter/ C:\jdk1.8.0_121 batik-1.9/ 1.9 pdfbox/ 2.0.9 C:\xampp\tomcat\webapps\cadviewer\/converters/files//Asbestos_drawing_01_Oct_6_H17_34.png C:\xampp\tomcat\webapps\cadviewer\/converters/files//Asbestos_drawing_01_Oct_6_H17_34.pdf-Xmx512M

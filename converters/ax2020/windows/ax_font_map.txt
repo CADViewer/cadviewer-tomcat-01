@@ -1,0 +1,15 @@
+MyTTFont  ==> /my/map/location/of/this/font/Another.ttf
+FangSong_GB2312 ==> simfang
+FangSongGB2312 ==> simfang
+FangSong-GB2312 ==> simfang
+@FangSong_GB2312 ==> simfang
+@FangSongGB2312 ==> simfang
+@FangSong-GB2312 ==> simfang
+SimHei ==> simfang
+SimHei.ttf ==> simfang.ttf
+FangSong_GB2312.ttf ==> simfang.ttf
+FangSongGB2312.ttf ==> simfang.ttf
+FangSong-GB2312.ttf ==> simfang.ttf
+@FangSongGB2312.ttf ==> simfang.ttf
+@FangSong-GB2312.ttf ==> simfang.ttf
+@FangSong_GB2312.ttf ==> simfang.ttf
