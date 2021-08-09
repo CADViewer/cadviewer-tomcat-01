@@ -1,6 +1,6 @@
 <cvjs>
 <iconmenu>
-	<totalpages>5</totalpages>
+	<totalpages>4</totalpages>
 	<startpage>1</startpage>
 	<pages>
 		<page>
@@ -55,20 +55,21 @@
 			<command>cvjs_exitCompareDrawings</command>
 		</page>
 		<page>
-			<command>cvjs_saveAsSVGOnServer</command>
-			<command>cvjs_loadSpaceObjectsUser</command>
 			<command>cvjs_changeSpaceObjectDisplayMode</command>
 			<command>cvjs_addPolygonSpaceObject</command>
 			<command>cvjs_addRectangleSpaceObject</command>
 			<command>cvjs_addCircleSpaceObject</command>
 			<command>cvjs_copyCircleSpaceObject</command>
+			<command>cvjs_resizeSpaceObject</command>
+			<command>cvjs_moveSpaceObject</command>
+			<command>cvjs_rotateSpaceObject</command>
 			<command>cvjs_deleteSpaceObject</command>
-			<command>cvjs_loadDrawingsWithSpaceObjects</command>
-			<command>cvjs_LayerListSpaceObject</command>
-		</page>
-		<page>
-			<command>cvjs_resizeSpaceImageObject</command>
-			<command>cvjs_deleteSpaceImageObject</command>
+			<command>cvjs_clearSpaceObjects</command>
+			<command>cvjs_SettingsSpace</command>
+			<command>cvjs_openFileLoadToServerSpace</command>
+			<command>cvjs_LayerListSpace</command>
+			<command>cvjs_loadSpaceObjectsUser</command>
+			<command>cvjs_saveSpaceObjectsUser</command>
 			<command>cvjs_saveAsSVGOnServer</command>
 		</page>
 	</pages>

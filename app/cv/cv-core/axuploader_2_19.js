@@ -33,7 +33,7 @@
         	      'error':function(e){},
         	      'GIFprogress':'',
         	      'enable':true,
-        	      'chunkSize':50*1024*1024//default 1Mb
+        	      'chunkSize':100*1024*1024//default 1Mb
     	        };
 
 				var _this=this;

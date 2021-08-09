@@ -1,10 +1,10 @@
 // CADVIEWER INSTALLATION FOLDERS
 
 //	var ServerLocation = "/var/www/html/cadviewer/";   					// Apache, Linux
-	var ServerLocation = "C:\\xampp\\htdocs\\cadviewer_6_1_0\\"; 	    // Apache, Windows
+	var ServerLocation = "C:\\xampp\\htdocs\\cadviewer\\"; 	    // Apache, Windows
 
 // Location of installation Url
-	var ServerUrl = "http://localhost/cadviewer_6_1_0/";        	    // Apache, Windows
+	var ServerUrl = "http://localhost/cadviewer/";        	    // Apache, Windows
 //	var ServerUrl = "http://10.0.2.15/cadviewer/";        				// Apache, Linux
 
 

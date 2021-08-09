@@ -1,13 +1,13 @@
 // CADVIEWER INSTALLATION FOLDERS
 
-//	var ServerLocation = "/usr/bin/nodejs/cadviewer/";   				// NodeJS, Linux
-	var ServerLocation = "C:/nodejs/cadviewer/"; 	    				// NodeJS, Windows
 
 // Location of installation Front-End ServerUrl
-	var ServerUrl = "http://127.0.0.1:8081/";        	    			// NodeJS, Windows
+	var ServerUrl = "http://localhost:4200/";        	    			// NodeJS, Windows
 //	var ServerUrl = "http://127.0.0.1:8081/";        					// NodeJS, Linux
 
 
+//	var ServerLocation = "/usr/bin/nodejs/cadviewer/";   				// NodeJS, Linux
+var ServerLocation = "C:/nodejs/cadviewer/"; 	    				// NodeJS, Windows
 
 
 // Location of installation BackEnd ServerUrl

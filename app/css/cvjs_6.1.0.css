@@ -1775,7 +1775,7 @@ table.layerListTable td {
     z-index:1000;
 	border: 0px solid gray; 
 	position:absolute;
-	top: 0px;
+	top: 5px;    /* 6.4.27 */
 	left: 0px;
  	width: 100%; 
  	height: 23px;
@@ -1876,6 +1876,36 @@ table.pagechangeListTable td {
 	
 
 }
+
+
+.spaceObjectsCreateInitModal{
+	z-index:1000;
+ width: 380px; 
+ height: 120px;
+ border-radius: 3px;
+ background-color: #FFFFFF;
+ border: 2px solid gray;
+ position: absolute;
+ 
+ font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  /* line-height: 1.42857143; */
+  color: #333
+ 
+
+}
+
+#cvjs_spaceobjectsettingsTextCreate {
+
+	position: absolute;
+	right: 20px;
+	top: 80px;		
+}
+
+
+
+
+
 
 table.textsearchModalTable {
 	width: 376px  ;
@@ -2172,7 +2202,7 @@ table.info_messageModal_2Table td {
 .calibrateModal{
    	z-index:1000;
 	width: 360px; 
-	height: 130px;
+	height: 220px;
 	border-radius: 3px;
 	background-color: #FFFFFF;
 	border: 2px solid gray;
@@ -2233,11 +2263,15 @@ table.calibrateModalTable td {
 
 #cvjs_calibrate_button{
 
+
+	position: absolute;
+	top: 152px;
+	right: 10px;
+
+
 	width: 40px;
 	height: 20px; 
 	padding: 1px;
-    	top: 3px;
-    	bottom: 3px;
     	z-index:1000;
     	margin: 0px;
     	text-indent: 1px;
@@ -2251,6 +2285,34 @@ table.calibrateModalTable td {
 	background: #D28A8E0;
 
 }
+
+
+#cvjs_calibrate_button2{
+
+	position: absolute;
+	top: 64px;
+	right: 10px;
+
+	width: 40px;
+	height: 20px; 
+	padding: 1px;
+    	z-index:1000;
+    	margin: 0px;
+    	text-indent: 1px;
+    	text-align:center;
+	font-family: "Arial-BoldMT", Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	font-weight: bold;
+	color:#000000;
+	font-size: 12px;
+	line-height: 1;
+	background: #D28A8E0;
+
+}
+
+
+
+
 
 .cvjs_inputCalibrateModal{
 
@@ -2280,6 +2342,15 @@ table.calibrateModalTable td {
     	margin-left: 10px;
 	font-size: 11px;
 }
+
+#cvjs_calibrationModalText2{
+	margin-top: 1px;
+	margin-bottom: 2px;
+	margin-right: 10px;
+    	margin-left: 10px;
+	font-size: 11px;
+}
+
 
 
 #cvjs_measurementModalText{
@@ -2591,6 +2662,42 @@ table.printModalTable td {
     	left: 10px;
     	top: 90px;
 }
+
+/*  6.4.27 */
+
+#cvjs_calibrate_checkbox{
+/*		position: absolute;
+    	left: 200px;
+    	top: 28px;*/
+}
+
+#cvjs_calibrate_checkbox2{
+/*	position: absolute;
+    	left: 200px;
+    	top: 28px; */
+}
+
+#cvjs_calibrate_checkbox3{
+	/*	position: absolute;
+			left: 200px;
+			top: 28px; */
+	}
+	
+#cvjs_checkboxCalibrateLocation{
+/*	position: absolute;
+    	left: 220px;
+    	top: 28px;	*/
+}
+
+#cvjs_checkboxCalibrateSelectPoints{
+	/*	position: absolute;
+			left: 220px;
+			top: 28px;	*/
+	}
+	
+
+
+
 
 #cvjs_printtoscale_checkbox{   /* 3.3.02f */
 	position: absolute;

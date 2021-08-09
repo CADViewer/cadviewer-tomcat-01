@@ -108,6 +108,9 @@
 				<NoQRCode>No QR Code received from Server!</NoQRCode>
 				<DrawingName>Drawing:</DrawingName>
 				<NotSpaceMode>Please go into "Change Space Object Display Mode" to delete spaces!</NotSpaceMode>
+				<TimeOut1>Alert: There was no response from the Server alternatively the Back-End Conversion went into an unfinished loop, wait time (</TimeOut1>
+				<TimeOut2>) sec. Please load another file.</TimeOut2>
+				<IdAlreadyUsed>NOTE: This ID has already been used, please use another ID.</IdAlreadyUsed>
 			</InfoMessageModal>
 			<InitSpaceObjects>
 				<ModalModify>Space Objects - Modify Settings</ModalModify>
@@ -132,6 +135,9 @@
 				<RedlineFilename>REDLINE / FILENAME</RedlineFilename>
 				<EditRedlineInfo>Edit Redline Info</EditRedlineInfo>
 				<Upload>UPLOAD</Upload>
+				<HeaderSpace>CADViewer - Save Space Object</HeaderSpace>
+				<SpaceFilename>SPACE / FILENAME</SpaceFilename>
+				<EditSpaceInfo>Edit Space Info</EditSpaceInfo>
 			</SaveRedlineModal>
 			<OpenRedlineModal>
 				<Header>CADViewer - Open Redline</Header>
@@ -223,6 +229,8 @@
 				<Brown>Brown</Brown>
 				<Gray>Gray</Gray>
 				<OK>OK</OK>
+				<Transparent>Transparent</Transparent>
+				<Opacity>Opacity:</Opacity>
 			</BackgroundColorModal>
 			<RedlineTextModal>
 				<Header>Redline Text</Header>
@@ -241,6 +249,11 @@
 				<Distance>Distance:</Distance>
 				<OK>OK</OK>
 				<Text>Select two points in the drawing with the mouse first, then enter unit and distance and press OK</Text>
+				<TextObject>Select a path entity in the drawing with the mouse first, then enter unit and distance and press OK</TextObject>
+				<SelectPath>Select Path Entity</SelectPath>
+				<SelectPoints>Select Two Points</SelectPoints>
+				<Scalefac>Scale Factor:</Scalefac>
+				<TextScale>Enter unit and and Scale Factor and press OK</TextScale>
 			</CalibrateModal>
 			<SettingsModal>
 				<Header>CADViewer General Settings</Header>
@@ -276,11 +289,21 @@
 					<MenuItem>Multiple Points(Global)</MenuItem>
 					<MenuItem>Multiple Points(SVG)</MenuItem>
 					<MenuItem>SVG Path</MenuItem>
+					<MenuItem>Path Length</MenuItem>
 				</MenuItems>
 				<Point>Point:</Point>
 				<Points>Points:</Points>
 				<PointText>Select a single point, capture from clipboard.</PointText>
 				<PointsText>Select multiple points, capture from clipboard.</PointsText>
+				<PathText>Click on an path for length</PathText>
+				<PathLength>Length:</PathLength>
+				<Snap>Snap Mode:</Snap>
+				<SnapItems>
+					<SnapItem>None</SnapItem>
+					<SnapItem>Nearest</SnapItem>
+					<SnapItem>End Point</SnapItem>
+					<SnapItem>Center Point</SnapItem>
+				</SnapItems>
 			</MeasurementModal>
 			<BirdsEyeModal>
 				<Header>Birds-Eye Window</Header>
@@ -396,6 +419,7 @@
 				<LoadLink>Load All Image Links</LoadLink>
 				<InsertLink>Insert Image Links</InsertLink>
 				<SaveLink>Save All Image Links</SaveLink>
+				<ClearLink>Clear All Image Links</ClearLink>
 				<QuickCount>Quick Count</QuickCount>
 				<CountSum>Summary Quick Count</CountSum>
 				<ClearCount>Clear Quick Count</ClearCount>
@@ -425,6 +449,7 @@
 				<DragSpaceImage>Drag Space Image Object</DragSpaceImage>
 				<ResizeSpaceImage>Resize Space Image Object</ResizeSpaceImage>
 				<LoadSpaceObjects>Load Space Objects</LoadSpaceObjects>
+				<SaveSpaceObjects>Save Space Objects</SaveSpaceObjects>
 				<Publish>View Space Object Structure in User Display Mode</Publish>
 				<DownloadSVG>Download processed SVG drawing</DownloadSVG>
 				<Load>Load Floorplan and pre-process Space Objects</Load>
@@ -434,11 +459,15 @@
 				<Polygon>Polygon Space Object</Polygon>
 				<Circle>Circle Space Object</Circle>
 				<CopyCircle>Copy Circle Space Object</CopyCircle>
+				<ClearSpaces>Clear All Spaces</ClearSpaces>
 				<Delete>Delete Space Object</Delete>
 				<LayerList>Layer List</LayerList>
 				<Mode>Toggle Space Object Display and Edit Mode</Mode>
 				<Free>Free</Free>
 				<SelectPolygon>Generate Space Object on closed polygon</SelectPolygon>
+				<ResizeSpaceObject>Resize Space Object</ResizeSpaceObject>
+				<MoveSpaceObject>Move Space Object</MoveSpaceObject>
+				<RotateSpaceObject>Rotate Space Object</RotateSpaceObject>
 			</IconPage_p5_8>		
 			<IconPage_p6_1>
 				<PinMarker>Add Pin Marker</PinMarker>
@@ -612,6 +641,9 @@
 				<NoQRCode> ¡No se recibió ningún código QR del servidor! </NoQRCode>
 				<DrawingName> Dibujo: </DrawingName>			
 <NotSpaceMode> ¡Vaya a "Cambiar modo de visualización de objetos espaciales" para eliminar espacios! </NotSpaceMode>
+				<TimeOut1>Alerta: no hubo respuesta del servidor, alternativamente, la conversión de back-end entró en un bucle sin terminar, tiempo de espera (</TimeOut1>
+				<TimeOut2>) seg. Cargue otro archivo.</TimeOut2>
+				<IdAlreadyUsed>NOTA: Esta ID ya se ha utilizado, utilice otra ID.</IdAlreadyUsed>
 </InfoMessageModal>
 <InitSpaceObjects>
 <ModalModify> Objetos espaciales - Modificar configuración </ModalModify>
@@ -634,8 +666,11 @@
 				<Header> CADViewer - Guardar línea roja </Header>
 				<RedlineFilename> Línea roja / Nombre del archivo </RedlineFilename>
 				<EditRedlineInfo> Editar información de línea roja </EditRedlineInfo>
-				<Upload> CARGAR </Upload>
-			</SaveRedlineModal>
+<Upload> CARGAR </Upload>
+<HeaderSpace> CADViewer - Guardar objeto de espacio </HeaderSpace>
+<SpaceFilename> SPACE / FILENAME </SpaceFilename>
+<EditSpaceInfo> Editar información del espacio </EditSpaceInfo>
+.			</SaveRedlineModal>
 			<OpenRedlineModal>
 				<Header> CADViewer - Abrir línea roja </Header>
 				<RedlineFilename> Línea roja / Nombre del archivo</RedlineFilename>
@@ -726,6 +761,8 @@
 				<Brown> Marrón </Brown>
 				<Gray> Gris </Gray>
 				<OK> OK </OK>
+				<Transparent>Transparente</Transparent>
+				<Opacity>Opacidad:</Opacity>				
 			</BackgroundColorModal>
 			<RedlineTextModal>
 				<Header> Texto de línea roja </Header>
@@ -744,6 +781,11 @@
 				<Distance> Distancia: </Distance>
 				<OK> OK </OK>
 				<Text> Seleccione primero dos puntos en el dibujo con el mouse, luego ingrese la unidad y la distancia y presione OK </Text>
+				<TextObject>Seleccione una entidad de ruta en el dibujo con el mouse primero, luego ingrese la unidad y la distancia y presione OK</TextObject>
+				<SelectPath>Seleccionar ruta</SelectPath>
+				<SelectPoints>Seleccione dos puntos</SelectPoints>
+				<Scalefac>Factor de escala:</Scalefac>
+				<TextScale>Ingrese la unidad y el factor de escala y presione OK</TextScale>
 			</CalibrateModal>	
 			<SettingsModal>
 				<Header> Configuración general de CADViewer </Header>
@@ -779,11 +821,21 @@
 					<MenuItem> Puntos múltiples (Global) </MenuItem>
 					<MenuItem> Puntos múltiples (SVG) </MenuItem>
 					<MenuItem>Ruta SVG</MenuItem>
+					<MenuItem>Longitud de la trayectoria</MenuItem>
 				</MenuItems>				
 				<Point> Punto: </Point>
 				<Points> Puntos: </Points>
 				<PointText> Seleccione un solo punto, capturar desde el portapapeles. </PointText>
 				<PointsText> Seleccione varios puntos, capture desde el portapapeles. </PointsText>
+				<PathText>Haga clic en una ruta para ver la longitud</PathText>
+				<PathLength>Longitud:</PathLength>
+				<Snap>Modo de ajuste:</Snap>
+				<SnapItems>
+					<SnapItem>Ninguno</SnapItem>
+					<SnapItem>Más cercano</SnapItem>
+					<SnapItem>Punto final</SnapItem>
+					<SnapItem>Punto central</SnapItem>   
+				</SnapItems>
 			</MeasurementModal>
 			<BirdsEyeModal>
 				<Header> Ventana de ojo de pájaro </Header>
@@ -899,6 +951,7 @@
 				<LoadLink> Cargar todos los enlaces de imágenes </LoadLink>
 				<InsertLink> Insertar enlaces de imagen </InsertLink>
 				<SaveLink> Guardar todos los enlaces de imágenes </SaveLink>
+				<ClearLink>Borrar todos los enlaces de imágenes</ClearLink>
 				<QuickCount> Cuenta rápida </QuickCount>
 				<CountSum> Cuenta rápida de resumen </CountSum>
 				<ClearCount> Borrar conteo rápido </ClearCount>
@@ -928,6 +981,7 @@
 				<DragSpaceImage> Arrastrar objeto de imagen de espacio </DragSpaceImage>
 				<ResizeSpaceImage> Cambiar el tamaño del objeto de imagen espacial </ResizeSpaceImage>
 				<LoadSpaceObjects> Cargar objetos de espacio </LoadSpaceObjects>
+				<SaveSpaceObjects>Save Space Objects</SaveSpaceObjects>
 				<Publish> Ver estructura de objeto espacial en modo de visualización de usuario </Publish>
 				<DownloadSVG> Descargar dibujo SVG procesado </DownloadSVG>
 				<Load> Cargar plano y preprocesar objetos espaciales </Load>
@@ -937,12 +991,16 @@
 				<Polygon> Polygon Space Object </Polygon>
 				<Circle> Objeto de espacio circular </Circle>
 				<CopyCircle> Copiar objeto de espacio circular </CopyCircle>
+				<ClearSpaces>Borrar todos los espacios</ClearSpaces>
 				<Delete> Eliminar objeto de espacio </Delete>
 				<LayerList> Lista de capas </LayerList>
 				<Mode> Alternar visualización de objetos espaciales y modo de edición </Mode>
 				<Free> Gratis </Free>
 				<SelectPolygon> Generar objeto espacial en polígono cerrado </SelectPolygon>
-			</IconPage_p5_8>		
+<ResizeSpaceObject> Cambiar el tamaño del objeto espacial </ResizeSpaceObject>
+<MoveSpaceObject> Mover objeto espacial </MoveSpaceObject>
+<RotateSpaceObject> Rotar objeto espacial </RotateSpaceObject>			
+</IconPage_p5_8>		
 			<IconPage_p6_1>
 				<PinMarker> Añadir marcador de pin </PinMarker>
 			</IconPage_p6_1>
@@ -1115,6 +1173,9 @@
 			<NoQRCode>没有收到来自服务器的QR码！</NoQRCode>
 			<DrawingName>绘图：</DrawingName>
 <NotSpaceMode>请进入“更改空间对象显示模式”以删除空格！</NotSpaceMode>
+				<TimeOut1>警报：服务器未响应，否则后端转换进入未完成的循环，请等待时间（</TimeOut1>
+				<TimeOut2>）秒。 请加载另一个文件。</TimeOut2>
+				<IdAlreadyUsed>注意：此ID已被使用，请使用另一个ID。</IdAlreadyUsed>
 </InfoMessageModal>
 <InitSpaceObjects>
 <ModalModify>空间对象-修改设置</ModalModify>
@@ -1138,8 +1199,11 @@
 			<Header> CADViewer-保存红线</Header>
 			<RedlineFilename> REDLINE /文件名</RedlineFilename>
 			<EditRedlineInfo>编辑红线信息</EditRedlineInfo>
-			<Upload> UPLOAD </Upload>
-			</SaveRedlineModal>
+<Upload>上传</Upload>
+<HeaderSpace> CADViewer-保存空间对象</HeaderSpace>
+<SpaceFilename>空格/文件名</SpaceFilename>
+<EditSpaceInfo>编辑空间信息</EditSpaceInfo>
+。			</SaveRedlineModal>
 			<OpenRedlineModal>
 			<Header> CADViewer-打开红线</Header>
 			<RedlineFilename> REDLINE /文件名</RedlineFilename>
@@ -1230,6 +1294,8 @@
 			<Brown>布朗</Brown>
 			<Gray>灰色</Gray>
 			<OK>确定</OK>
+			<Transparent>透明</Transparent>
+			<Opacity>不透明度:</Opacity>			
 			</BackgroundColorModal>
 			<RedlineTextModal>
 			<Header>红线文字</Header>
@@ -1248,6 +1314,11 @@
 			<Distance> 距离：</Distance>
 			<OK>确定</OK>
 			<Text>首先用鼠标在图形中选择两个点，然后输入单位和距离，然后按确定</Text>
+				<TextObject>首先用鼠标在图形中选择一个路径实体，然后输入单位和距离，然后按OK。</TextObject>
+				<SelectPath>选择路径</SelectPath>
+				<SelectPoints>选择两点</SelectPoints>
+				<Scalefac>比例因子：</Scalefac>
+				<TextScale>输入单位和比例因子，然后按确定</TextScale>
 			</CalibrateModal>
 			<SettingsModal>
 			<Header> CADViewer常规设置</Header>
@@ -1283,12 +1354,22 @@
 				<MenuItem>多个点（全局）</MenuItem>
 				<MenuItem>多点（SVG）</MenuItem>
 					<MenuItem>SVG路径</MenuItem>
+					<MenuItem>路径长度</MenuItem>
 			</MenuItems>
 			<Point>单点:</Point>
 			<Points>多点:</Points>			
 			<PointText>选择一个点，从剪贴板捕获。</PointText>
 			<PointsText>选择多个点，从剪贴板中捕获。</PointsText>			
-			</MeasurementModal>
+				<PathText>单击路径以获取长度</PathText>
+				<PathLength>长度：</PathLength>
+				<Snap>捕捉模式:</Snap>
+				<SnapItems>
+					<SnapItem>无</SnapItem>
+					<SnapItem>最近</SnapItem>
+					<SnapItem>终点</SnapItem>
+					<SnapItem>中心点</SnapItem>
+				</SnapItems>
+			</MeasurementModal>  
 			<BirdsEyeModal>
 			<Header>鸟眼窗口</Header>
 			</BirdsEyeModal>
@@ -1403,6 +1484,7 @@
 			<LoadLink>加载所有图像链接</LoadLink>
 			<InsertLink>插入图像链接</InsertLink>
 			<SaveLink>保存所有图像链接</SaveLink>
+				<ClearLink>清除所有图像链接</ClearLink>
 			<QuickCount>快速计数</QuickCount>
 			<CountSum>摘要快速计数</CountSum>
 			<ClearCount>清除快速计数</ClearCount>
@@ -1432,6 +1514,7 @@
 			<DragSpaceImage>拖动空间图像对象</DragSpaceImage>
 			<ResizeSpaceImage>调整空间图像对象的大小</ResizeSpaceImage>
 			<LoadSpaceObjects>加载空间对象</LoadSpaceObjects>
+				<SaveSpaceObjects>Save Space Objects</SaveSpaceObjects>
 			<Publish>以用户显示模式查看空间对象结构</Publish>
 			<DownloadSVG>下载已处理的SVG图纸</DownloadSVG>
 			<Load>加载平面图和预处理空间对象</Load>
@@ -1441,12 +1524,16 @@
 			<Polygon>多边形空间对象</Polygon>
 			<Circle>圆形空间对象</Circle>
 			<CopyCircle>复制圆空间对象</CopyCircle>
+				<ClearSpaces>清除所有空格</ClearSpaces>
 			<Delete>删除空间对象</Delete>
 			<LayerList>层列表</LayerList>
 			<Mode>切换空间对象的显示和编辑模式</Mode>
 			<Free>免费</Free>
 			<SelectPolygon>在封闭的多边形上生成空间对象</SelectPolygon>
-			</IconPage_p5_8>
+<ResizeSpaceObject>调整空间对象的大小</ResizeSpaceObject>
+<MoveSpaceObject>移动空间对象</MoveSpaceObject>
+<RotateSpaceObject>旋转空间对象</RotateSpaceObject>			
+</IconPage_p5_8>
 			<IconPage_p6_1>
 			<PinMarker>添加Pin标记</PinMarker>
 			</IconPage_p6_1>
@@ -1619,6 +1706,9 @@
 			<NoQRCode>沒有收到來自服務器的QR碼！ </NoQRCode>
 			<DrawingName>繪圖：</DrawingName>
 <NotSpaceMode>請進入“更改空間對象顯示模式”以刪除空格！</NotSpaceMode>
+				<TimeOut1>警告：服務器未響應，或者後端轉換進入未完成的循環，請等待時間（</TimeOut1>
+				<TimeOut2>）秒。 請加載另一個文件。</TimeOut2>
+				<IdAlreadyUsed>注意：此ID已被使用，請使用另一個ID。</IdAlreadyUsed>
 </InfoMessageModal>
 <InitSpaceObjects>
 <ModalModify>空間對象-修改設置</ModalModify>
@@ -1642,8 +1732,11 @@
 			<Header> CADViewer-保存紅線</Header>
 			<RedlineFilename> REDLINE /文件名</RedlineFilename>
 			<EditRedlineInfo>編輯紅線信息</EditRedlineInfo>
-			<Upload> UPLOAD </Upload>
-			</SaveRedlineModal>
+<Upload>上傳</Upload>
+<HeaderSpace> CADViewer-保存空間對象</HeaderSpace>
+<SpaceFilename>空格/文件名</SpaceFilename>
+<EditSpaceInfo>編輯空間信息</EditSpaceInfo>
+。			</SaveRedlineModal>
 			<OpenRedlineModal>
 			<Header> CADViewer-打開紅線</Header>
 			<RedlineFilename> REDLINE /文件名</RedlineFilename>
@@ -1734,6 +1827,8 @@
 			<Brown>布朗</Brown>
 			<Gray>灰色</Gray>
 			<OK>確定</OK>
+			<Transparent>透明</Transparent>
+			<Opacity>不透明度:</Opacity>			
 			</BackgroundColorModal>
 			<RedlineTextModal>
 			<Header>紅線文字</Header>
@@ -1752,6 +1847,11 @@
 			<Distance> 距離：</Distance>
 			<OK>確定</OK>
 			<Text>首先用鼠標在圖形中選擇兩個點，然後輸入單位和距離，然後按確定</Text>
+				<TextObject>首先用鼠標在圖形中選擇一個路徑實體，然後輸入單位和距離，然後按OK。</TextObject>
+				<SelectPath>選擇路徑</SelectPath>
+				<SelectPoints>選擇兩點</SelectPoints>
+				<Scalefac>比例因子：</Scalefac>
+				<TextScale>輸入單位和比例因子，然後按確定</TextScale>
 			</CalibrateModal>
 			<SettingsModal>
 			<Header> CADViewer常規設置</Header>
@@ -1787,12 +1887,22 @@
 				<MenuItem>多個點（全局）</MenuItem>
 				<MenuItem>多點（SVG）</MenuItem>
 					<MenuItem>SVG路徑</MenuItem>
+					<MenuItem>路徑長度</MenuItem>					
 			</MenuItems>
 			<Point>單點:</Point>
 			<Points>多點:</Points>
 			<PointText>選擇一個點，從剪貼板捕獲。</PointText>
 			<PointsText>選擇多個點，從剪貼板中捕獲。</PointsText>
-			</MeasurementModal>
+				<PathText>單擊路徑以獲取長度</PathText>
+				<PathLength>長度：</PathLength>
+				<Snap>捕捉模式:</Snap>
+				<SnapItems>
+					<SnapItem>無</SnapItem>
+					<SnapItem>最近</SnapItem>
+					<SnapItem>終點</SnapItem>
+					<SnapItem>中心點</SnapItem>
+				</SnapItems>
+			</MeasurementModal> 
 			<BirdsEyeModal>
 			<Header>鳥眼窗口</Header>
 			</BirdsEyeModal>
@@ -1907,6 +2017,7 @@
 			<LoadLink>加載所有圖像鏈接</LoadLink>
 			<InsertLink>插入圖像鏈接</InsertLink>
 			<SaveLink>保存所有圖像鏈接</SaveLink>
+				<ClearLink>清除所有圖像鏈接</ClearLink>
 			<QuickCount>快速計數</QuickCount>
 			<CountSum>摘要快速計數</CountSum>
 			<ClearCount>清除快速計數</ClearCount>
@@ -1936,6 +2047,7 @@
 			<DragSpaceImage>拖動空間圖像對象</DragSpaceImage>
 			<ResizeSpaceImage>調整空間圖像對象的大小</ResizeSpaceImage>
 			<LoadSpaceObjects>加載空間對象</LoadSpaceObjects>
+				<SaveSpaceObjects>Save Space Objects</SaveSpaceObjects>
 			<Publish>以用戶顯示模式查看空間對象結構</Publish>
 			<DownloadSVG>下載已處理的SVG圖紙</DownloadSVG>
 			<Load>加載平面圖和預處理空間對象</Load>
@@ -1945,11 +2057,15 @@
 			<Polygon>多邊形空間對象</Polygon>
 			<Circle>圓形空間對象</Circle>
 			<CopyCircle>複製圓空間對象</CopyCircle>
+				<ClearSpaces>清除所有空格</ClearSpaces>
 			<Delete>刪除空間對象</Delete>
 			<LayerList>層列表</LayerList>
 			<Mode>切換空間對象的顯示和編輯模式</Mode>
 			<Free>免費</Free>
 			<SelectPolygon>在封閉的多邊形上生成空間對象</SelectPolygon>
+<ResizeSpaceObject>調整空間對象的大小</ResizeSpaceObject>
+<MoveSpaceObject>移動空間對象</MoveSpaceObject>
+<RotateSpaceObject>旋轉空間對象</RotateSpaceObject>
 			</IconPage_p5_8>
 			<IconPage_p6_1>
 			<PinMarker>添加Pin標記</PinMarker>
@@ -2123,6 +2239,9 @@
 				<NoQRCode> Nenhum código QR recebido do servidor! </NoQRCode>
 				<DrawingName> Desenho: </DrawingName>			
 <NotSpaceMode> Vá em "Alterar modo de exibição de objeto de espaço" para excluir espaços! </NotSpaceMode>
+				<TimeOut1>Alerta: Não houve resposta do servidor. Alternativamente, a conversão de back-end entrou em um loop inacabado, tempo de espera (</TimeOut1>
+				<TimeOut2>) sec. Carregue outro arquivo.</TimeOut2>
+				<IdAlreadyUsed>NOTA: Este ID já foi usado, por favor, use outro ID.</IdAlreadyUsed>
 </InfoMessageModal>
 <InitSpaceObjects>
 <ModalModify> Objetos de espaço - Modificar configurações </ModalModify>
@@ -2146,7 +2265,10 @@
 			<Header> CADViewer - Salvar redline </Header>
 			<RedlineFilename> Linha vermelha / Nome do arquivo </RedlineFilename>
 			<EditRedlineInfo> Editar informações de redline </EditRedlineInfo>
-			<Upload> UPLOAD </Upload>
+<Upload> CARREGAR </Upload>
+<HeaderSpace> CADViewer - Salvar objeto de espaço </HeaderSpace>
+<SpaceFilename> SPACE / FILENAME </SpaceFilename>
+<EditSpaceInfo> Editar Informações do Espaço </EditSpaceInfo>
 			</SaveRedlineModal>
 			<OpenRedlineModal>
 			<Header> CADViewer - Abrir linha vermelha </Header>
@@ -2238,6 +2360,8 @@
 				<Brown> Marrom </Brown>
 				<Gray> Cinza </Gray>
 				<OK> OK </OK>
+				<Transparent>Transparente</Transparent>
+				<Opacity>Opacidade:</Opacity>				
 			</BackgroundColorModal>
 			<RedlineTextModal>
 				<Header> Texto em linha vermelha</Header>
@@ -2256,6 +2380,11 @@
 			<Distance> Distância: </Distance>
 			<OK> OK </OK>
 			<Text> Selecione primeiro dois pontos do desenho com o mouse, depois insira a unidade e a distância e pressione OK </Text>
+				<TextObject>Selecione uma entidade de caminho no desenho com o mouse primeiro, insira a unidade e a distância e pressione OK</TextObject>
+				<SelectPath>Selecione o caminho</SelectPath>
+				<SelectPoints>Selecione dois pontos</SelectPoints>
+				<Scalefac>Fator de escala:</Scalefac>
+				<TextScale>Insira a unidade e o Fator de escala e pressione OK</TextScale>
 			</CalibrateModal>
 			<SettingsModal>
 			<Header> Configurações gerais do CADViewer </Header>
@@ -2291,11 +2420,21 @@
 				<MenuItem> Vários pontos (global) </MenuItem>
 				<MenuItem> Vários pontos (SVG) </MenuItem>
 					<MenuItem>Caminho SVG</MenuItem>
+					<MenuItem>Comprimento do percurso</MenuItem>
 			</MenuItems>
 			<Point> Ponto: </Point>
 			<Points> Multiponto: </Points>
 			<PointText> Selecione um único ponto, capture da área de transferência. </PointText>
 			<PointsText> Selecione vários pontos, capture da área de transferência. </PointsText>
+				<PathText>Clique em um caminho para obter comprimento</PathText>
+				<PathLength>Comprimento:</PathLength>
+				<Snap>Modo de ajuste:</Snap>
+				<SnapItems>
+					<SnapItem>Nenhum</SnapItem>
+					<SnapItem>Mais próximo</SnapItem>
+					<SnapItem>Ponto final</SnapItem>
+					<SnapItem>Ponto central</SnapItem>  
+				</SnapItems>
 			</MeasurementModal>
 			<BirdsEyeModal>
 			<Header> Janela panorâmica </Header>
@@ -2411,6 +2550,7 @@
 				<LoadLink> Carregar todos os links de imagens </LoadLink>
 				<InsertLink> Inserir links de imagem </InsertLink>
 				<SaveLink> Salvar todos os links de imagens </SaveLink>
+				<ClearLink>Limpar todos os links de imagem</ClearLink>
 				<QuickCount> Contagem rápida </QuickCount>
 				<CountSum> Contagem rápida de resumo </CountSum>
 				<ClearCount> Limpar contagem rápida </ClearCount>
@@ -2440,6 +2580,7 @@
 				<DragSpaceImage> Arraste o objeto de imagem do espaço </DragSpaceImage>
 				<ResizeSpaceImage> Redimensionar objeto de imagem espacial </ResizeSpaceImage>
 				<LoadSpaceObjects> Carregar objetos de espaço </LoadSpaceObjects>
+				<SaveSpaceObjects>Save Space Objects</SaveSpaceObjects>
 				<Publish> Exibir estrutura de objetos espaciais no modo de exibição do usuário </Publish>
 				<DownloadSVG> Faça o download do desenho SVG processado </DownloadSVG>
 				<Load> Carregue a planta baixa e pré-processe os objetos espaciais </Load>
@@ -2449,12 +2590,16 @@
 				<Polygon> Objeto de espaço de polígono </Polygon>
 				<Circle> Objeto de espaço circular </Circle>
 				<CopyCircle> Copiar objeto de espaço em círculo </CopyCircle>
+				<ClearSpaces>Limpar todos os espaços</ClearSpaces>
 				<Delete> Excluir objeto de espaço </Delete>
 				<LayerList> Lista de camadas </LayerList>
 				<Mode> Alternar exibição de objeto de espaço e modo de edição </Mode>
 				<Free> Grátis </Free>
 				<SelectPolygon> Gerar objeto de espaço no polígono fechado </SelectPolygon>
-			</IconPage_p5_8>		
+<ResizeSpaceObject> Resize Space Object </ResizeSpaceObject>
+<MoveSpaceObject> Mover objeto de espaço </MoveSpaceObject>
+<RotateSpaceObject> Rotate Space Object </RotateSpaceObject>			
+</IconPage_p5_8>		
 			<IconPage_p6_1>
 			<PinMarker> Adicionar marcador de pinos </PinMarker>
 			</IconPage_p6_1>
@@ -2627,6 +2772,9 @@
 				<NoQRCode> 서버에서받은 QR 코드가 없습니다! </NoQRCode>
 				<DrawingName> 그림 : </DrawingName>
 <NotSpaceMode> 공백을 삭제하려면 "공간 개체 표시 모드 변경"으로 이동하십시오! </NotSpaceMode>
+				<TimeOut1>경고 : 서버에서 응답이 없거나 백엔드 변환이 완료되지 않은 루프, 대기 시간 (</TimeOut1>
+				<TimeOut2>) 초 다른 파일을로드하십시오.</TimeOut2>				
+				<IdAlreadyUsed>참고 :이 ID는 이미 사용되었습니다. 다른 ID를 사용하십시오.</IdAlreadyUsed>
 </InfoMessageModal>
 <InitSpaceObjects>
 <ModalModify> 공간 개체-설정 수정 </ModalModify>
@@ -2651,7 +2799,10 @@
 			<RedlineFilename> 레드 라인 / 파일 이름 </RedlineFilename>
 			<EditRedlineInfo> 레드 라인 정보 편집 </EditRedlineInfo>
 			<Upload> 업로드 </Upload>
-			</SaveRedlineModal>
+<HeaderSpace> CADViewer-공간 저장 개체 </HeaderSpace>
+<SpaceFilename> SPACE / FILENAME </SpaceFilename>
+<EditSpaceInfo> 공간 정보 편집 </EditSpaceInfo>
+.			</SaveRedlineModal>
 			<OpenRedlineModal>
 			<Header> CADViewer-오픈 레드 라인 </Header>
 			<RedlineFilename> 레드 라인 / 파일 이름 </RedlineFilename>
@@ -2742,6 +2893,8 @@
 			<Brown> 브라운 </Brown>
 			<Gray> 회색 </Gray>
 			<OK> 확인 </OK>
+			<Transparent>투명한</Transparent>
+			<Opacity>불투명:</Opacity>			
 			</BackgroundColorModal>
 			<RedlineTextModal>
 			<Header> 레드 라인 텍스트 </Header>
@@ -2760,6 +2913,11 @@
 			<Distance> 거리 : </Distance>
 			<OK> 확인 </OK>
 			<Text> 먼저 마우스로 도면의 두 점을 선택한 다음 단위와 거리를 입력하고 확인을 누릅니다. </Text>
+				<TextObject>먼저 마우스로 도면에서 경로 엔티티를 선택한 다음 단위와 거리를 입력하고 확인을 누릅니다.</TextObject>
+				<SelectPath>경로 선택</SelectPath>
+				<SelectPoints>두 점 선택</SelectPoints>
+				<Scalefac>스케일 팩터 :</Scalefac>
+				<TextScale>단위와 배율을 입력하고 확인을 누릅니다.</TextScale>
 			</CalibrateModal>
 			<SettingsModal>
 			<Header> CADViewer 일반 설정 </Header>
@@ -2796,11 +2954,21 @@
 			<MenuItem> 다중 점 (SVG) </MenuItem>
 			<MenuItem> SVG 경로 </MenuItem>
 					<MenuItem>SVG 경로</MenuItem>
+					<MenuItem>경로 길이</MenuItem>
 			</MenuItems>
 			<Point> 포인트 : </Point>
 			<Points> 포인트 : </Points>
 			<PointText> 단일 지점을 선택하고 클립 보드에서 캡처합니다. </PointText>
 			<PointsText> 여러 지점을 선택하고 클립 보드에서 캡처합니다. </PointsText>
+				<PathText>길이를 보려면 경로를 클릭하십시오</PathText>
+				<PathLength>길이:</PathLength>
+				<Snap>스냅 모드:</Snap>
+				<SnapItems>
+					<SnapItem>없음</SnapItem>
+					<SnapItem>가장 가까운</SnapItem>
+					<SnapItem>끝점</SnapItem>
+					<SnapItem>중심점</SnapItem>
+				</SnapItems>
 			</MeasurementModal>
 			<BirdsEyeModal>
 			<Header> 새 눈 창 </Header>
@@ -2916,6 +3084,7 @@
 				<LoadLink> 모든 이미지 링크로드 </LoadLink>
 				<InsertLink> 이미지 링크 삽입 </InsertLink>
 				<SaveLink> 모든 이미지 링크 저장 </SaveLink>
+				<ClearLink>모든 이미지 링크 지우기</ClearLink>
 				<QuickCount> 빠른 카운트 </QuickCount>
 				<CountSum> 요약 빠른 계산 </CountSum>
 				<ClearCount> 빠른 카운트 지우기 </ClearCount>
@@ -2945,6 +3114,7 @@
 				<DragSpaceImage> 드래그 공간 이미지 개체 </DragSpaceImage>
 				<ResizeSpaceImage> 공간 이미지 개체 크기 조정 </ResizeSpaceImage>
 				<LoadSpaceObjects> 공간 개체로드 </LoadSpaceObjects>
+				<SaveSpaceObjects>Save Space Objects</SaveSpaceObjects>
 				<Publish> 사용자 표시 모드에서 공간 개체 구조보기 </Publish>
 				<DownloadSVG> 처리 된 SVG 그림 다운로드 </DownloadSVG>
 				<Load> 플로어 플랜로드 및 공간 개체 전처리 </Load>
@@ -2954,11 +3124,16 @@
 				<Polygon> 다각형 공간 개체 </Polygon>
 				<Circle> 원형 공간 개체 </Circle>
 				<CopyCircle> 원 공간 개체 복사 </CopyCircle>
+				<ClearSpaces>모든 공간 지우기</ClearSpaces>
 				<Delete> 공간 개체 삭제 </Delete>
 				<LayerList> 레이어 목록 </LayerList>
 				<Mode> 공간 개체 표시 및 편집 모드 전환 </Mode>
 				<Free> 무료 </Free>
+				<MoveSpaceObject>공간 개체 이동</MoveSpaceObject>
 				<SelectPolygon> 닫힌 다각형에 공간 개체 생성 </SelectPolygon>
+<ResizeSpaceObject> 공간 개체 크기 조정 </ResizeSpaceObject>
+<MoveSpaceObject> 공간 개체 이동 </MoveSpaceObject>
+<RotateSpaceObject> 공간 개체 회전 </RotateSpaceObject>
 				</IconPage_p5_8>
 				<IconPage_p6_1>
 				<PinMarker> 핀 마커 추가 </PinMarker>
@@ -3132,6 +3307,9 @@
 			<NoQRCode> Tidak ada Kode QR yang diterima dari Server! </NoQRCode>
 			<DrawingName> Gambar: </DrawingName>
 <NotSpaceMode> Masuk ke "Ubah Mode Tampilan Space Object" untuk menghapus Space! </NotSpaceMode>
+				<TimeOut1>Peringatan: Tidak ada respons dari Server atau Konversi Back-End masuk ke loop yang belum selesai, tunggu waktu (</TimeOut1>
+				<TimeOut2>) dtk. Harap muat file lain.</TimeOut2>
+				<IdAlreadyUsed>CATATAN: ID ini sudah pernah digunakan, harap gunakan ID lain.</IdAlreadyUsed>
 </InfoMessageModal>
 <InitSpaceObjects>
 <ModalModify> Space Object - Ubah Pengaturan </ModalModify>
@@ -3156,7 +3334,10 @@
 			<RedlineFilename> Redline / Nama file </RedlineFilename>
 			<EditRedlineInfo> Edit Info Redline </EditRedlineInfo>
 			<Upload> UPLOAD </Upload>
-			</SaveRedlineModal>
+<HeaderSpace> CADViewer - Menghemat Objek Ruang </HeaderSpace>
+<SpaceFilename> SPACE / FILENAME </SpaceFilename>
+<EditSpaceInfo> Edit Info Space </EditSpaceInfo>
+.			</SaveRedlineModal>
 			<OpenRedlineModal>
 			<Header> CADViewer - Buka Redline</Header>
 			<RedlineFilename> Redline / Nama file </RedlineFilename>
@@ -3247,6 +3428,8 @@
 			<Brown> Coklat </Brown>
 			<Gray> Abu-abu </Gray>
 			<OK> OK </OK>
+			<Transparent>Transparan</Transparent>
+			<Opacity>Kegelapan:</Opacity>			
 			</BackgroundColorModal>
 			<RedlineTextModal>
 			<Header> Teks Redline </Header>
@@ -3265,6 +3448,11 @@
 			<Distance> Jarak </Distance>
 			<OK> OK </OK>
 			<Text> Pilih dua titik pada gambar dengan mouse terlebih dahulu, kemudian masukkan satuan dan jarak dan tekan OK </Text>
+				<TextObject>Pilih entitas jalur pada gambar dengan mouse terlebih dahulu, lalu masukkan satuan dan jarak dan tekan OK</TextObject>
+				<SelectPath>Pilih Path</SelectPath>
+				<SelectPoints>Pilih Dua Titik</SelectPoints>
+				<Scalefac>Faktor skala:</Scalefac>
+				<TextScale>Masukkan satuan dan dan Faktor Skala dan tekan OK</TextScale>
 			</CalibrateModal>
 			<SettingsModal>
 			<Header> Pengaturan Umum CADViewer </Header>
@@ -3300,11 +3488,21 @@
 			<MenuItem> Multiple Point (Global) </MenuItem>
 			<MenuItem> Multiple Point (SVG) </MenuItem>
 			<MenuItem> SVG Path</MenuItem>
+					<MenuItem>Panjang Jalur</MenuItem>
 			</MenuItems>
 			<Point> Titik: </Point>
 			<Points> Poin: </Points>
 			<PointText> Pilih satu titik, ambil dari clipboard. </PointText>
 			<PointsText> Pilih beberapa titik, ambil dari clipboard. </PointsText>
+				<PathText>Klik pada sebuah jalur untuk panjangnya</PathText>
+				<PathLength>Panjangnya:</PathLength>
+				<Snap>Mode jepret:</Snap>
+				<SnapItems>
+					<SnapItem>Tidak ada</SnapItem>
+					<SnapItem>Terdekat</SnapItem> 
+					<SnapItem>Titik akhir</SnapItem>
+					<SnapItem>Titik tengah</SnapItem>
+				</SnapItems>
 			</MeasurementModal>
 			<BirdsEyeModal>
 			<Header> Jendela Bird-Eyes </Header>
@@ -3420,6 +3618,7 @@
 				<LoadLink> Muat Semua Link Gambar </LoadLink>
 				<InsertLink> Sisipkan Link Gambar </InsertLink>
 				<SaveLink> Simpan Semua Link Gambar </SaveLink>
+				<ClearLink>Hapus Semua Link Gambar</ClearLink>
 				<QuickCount> Hitungan Cepat </QuickCount>
 				<CountSum> Hitung Cepat Ringkasan </CountSum>
 				<ClearCount> Hapus Quick Count </ClearCount>
@@ -3448,6 +3647,7 @@
 				<DragSpaceImage> Tarik Objek Gambar Ruang </DragSpaceImage>
 				<ResizeSpaceImage> Ubah Ukuran Objek Gambar Ruang </ResizeSpaceImage>
 				<LoadSpaceObjects> Memuat Objek Space </LoadSpaceObjects>
+				<SaveSpaceObjects>Save Space Objects</SaveSpaceObjects>
 				<Publish> Lihat Struktur Objek Space dalam Mode Tampilan Pengguna </Publish>
 				<DownloadSVG> Unduh gambar SVG yang telah diproses </DownloadSVG>
 				<Load> Muat Denah Lantai dan pra-proses Space Object </Load>
@@ -3457,12 +3657,16 @@
 				<Polygon> Objek Space Poligon </Polygon>
 				<Circle> Circle Space Object </Circle>
 				<CopyCircle> Salin Objek Ruang Lingkaran </CopyCircle>
+				<ClearSpaces>Hapus Semua Spasi</ClearSpaces>
 				<Delete> Hapus Objek Space </Delete>
 				<LayerList> Daftar layer </LayerList>
 				<Mode> Ubah Tampilan Space Object dan Mode Edit </Mode>
 				<Free>Free</Free>
 				<SelectPolygon> Hasilkan Objek Ruang pada poligon tertutup </SelectPolygon>
-			</IconPage_p5_8>		
+<ResizeSpaceObject> Ubah Ukuran Objek Space </ResizeSpaceObject>
+<MoveSpaceObject> Pindahkan Objek Luar Angkasa </MoveSpaceObject>
+<RotateSpaceObject> Putar Objek Luar Angkasa </RotateSpaceObject>	
+		</IconPage_p5_8>		
 			<IconPage_p6_1>
 				<PinMarker> Tambahkan Penanda Pin </PinMarker>
 			</IconPage_p6_1>
@@ -3635,6 +3839,9 @@
 				<NoQRCode> Kein QR-Code vom Server empfangen! </NoQRCode>
 				<DrawingName> Zeichnung: </DrawingName>
 <NotSpaceMode> Bitte gehen Sie in den "Change Space Object Display Mode", um Leerzeichen zu löschen! </NotSpaceMode>
+				<TimeOut1>Warnung: Es gab keine Antwort vom Server. Alternativ ging die Back-End-Konvertierung in eine unvollendete Schleife. Wartezeit (</TimeOut1>
+				<TimeOut2>) sek. Bitte laden Sie eine andere Datei.</TimeOut2>
+				<IdAlreadyUsed>HINWEIS: Diese ID wurde bereits verwendet. Bitte verwenden Sie eine andere ID.</IdAlreadyUsed>
 </InfoMessageModal>
 <InitSpaceObjects>
 <ModalModify> Space-Objekte - Einstellungen ändern </ModalModify>
@@ -3659,7 +3866,10 @@
 				<RedlineFilename> Redline / Dateiname </RedlineFilename>
 				<EditRedlineInfo> Redline-Informationen bearbeiten </EditRedlineInfo>
 				<Upload> HOCHLADEN </Upload>
-				</SaveRedlineModal>
+<HeaderSpace> CADViewer - Speicherplatzobjekt speichern </HeaderSpace>
+<SpaceFilename> SPACE / FILENAME </SpaceFilename>
+<EditSpaceInfo> Space Info bearbeiten </EditSpaceInfo>
+.				</SaveRedlineModal>
 				<OpenRedlineModal>
 				<Header> CADViewer - Redline Öffnen </Header>
 				<RedlineFilename> Redline / Dateiname </RedlineFilename>
@@ -3750,6 +3960,8 @@
 				<Brown>Braun</Brown>
 				<Gray>Grau</Gray>
 				<OK>OK</OK>
+				<Transparent>Transparent</Transparent>
+				<Opacity>Opazität:</Opacity>				
 			</BackgroundColorModal>
 			<RedlineTextModal>
 				<Header> Redline-Text </Header>
@@ -3765,9 +3977,14 @@
 				<CalibrateModal>
 				<Header> Messung kalibrieren </Header>
 				<Unit> Einheit: </Unit>
-				<Entfernung> Entfernung: </Entfernung>
+				<Distance> Entfernung: </Distance>
 				<OK> OK </OK>
 				<Text> Wählen Sie zuerst mit der Maus zwei Punkte in der Zeichnung aus, geben Sie dann Einheit und Abstand ein und drücken Sie OK </Text>
+				<TextObject>Wählen Sie mit der Maus zuerst ein Pfadelement in der Zeichnung aus, geben Sie dann Einheit und Entfernung ein und drücken Sie OK</TextObject>
+				<SelectPath>Pfad Wählen</SelectPath>
+				<SelectPoints>Zwei Punkte Wählen</SelectPoints>
+				<Scalefac>Skalierungsfaktor:</Scalefac>
+				<TextScale>Einheit und den Skalierungsfaktor eingeben und OK drücken</TextScale>
 				</CalibrateModal>
 			<SettingsModal>
 				<Header> Allgemeine CADViewer-Einstellungen </Header>
@@ -3803,11 +4020,21 @@
 				<MenuItem> Mehrere Punkte (global) </MenuItem>
 				<MenuItem> Mehrere Punkte (SVG) </MenuItem>
 				<MenuItem> SVG-Pfad </MenuItem>
+					<MenuItem>Pfadlänge</MenuItem>
 				</MenuItems>
 				<Punkt> Punkt: </Punkt>
 				<Punkte> Punkte: </Punkte>
 				<PointText> Wählen Sie einen einzelnen Punkt aus, der aus der Zwischenablage erfasst werden soll. </PointText>
 				<PointsText> Wählen Sie mehrere Punkte aus, die aus der Zwischenablage erfasst werden sollen. </PointsText>
+				<PathText>Klicken Sie auf einen Pfad für die Länge</PathText>
+				<PathLength>Länge:</PathLength>
+				<Snap>Fangmodus:</Snap>
+				<SnapItems>
+					<SnapItem>Keiner</SnapItem>
+					<SnapItem>Nächster</SnapItem> 
+					<SnapItem>Endpunkt</SnapItem>
+					<SnapItem>Mittelpunkt</SnapItem>
+				</SnapItems>
 			</MeasurementModal>
 				<BirdsEyeModal>
 				<Header> Birds-Eye-Fenster </Header>
@@ -3923,6 +4150,7 @@
 				<LoadLink> Alle Bildlinks laden </LoadLink>
 				<InsertLink> Bildlinks einfügen </InsertLink>
 				<SaveLink> Alle Bildlinks speichern </SaveLink>
+				<ClearLink>Alle Bildlinks löschen</ClearLink>
 				<QuickCount> Quick Count </QuickCount>
 				<CountSum> Zusammenfassung Quick Count </CountSum>
 				<ClearCount> Schnellzählung löschen </ClearCount>			
@@ -3952,6 +4180,7 @@
 				<DragSpaceImage> Space Image-Objekt ziehen </DragSpaceImage>
 				<ResizeSpaceImage> Größe des Space Image-Objekts ändern </ResizeSpaceImage>
 				<LoadSpaceObjects> Laden von Space-Objekten </LoadSpaceObjects>
+				<SaveSpaceObjects>Save Space Objects</SaveSpaceObjects>
 				<Publish> Anzeigen der Space-Objektstruktur im Benutzeranzeigemodus </Publish>
 				<DownloadSVG> Verarbeitete SVG-Zeichnung herunterladen </DownloadSVG>
 				<Load> Grundriss laden und Space-Objekte vorverarbeiten </Load>
@@ -3961,12 +4190,17 @@
 				<Polygon> Polygonraumobjekt </Polygon>
 				<Circle> Kreisraumobjekt </Circle>
 				<CopyCircle> Kreisraumobjekt kopieren </CopyCircle>
+								<ClearSpaces>Alle Leerzeichen löschen</ClearSpaces>
 				<Delete> Raumobjekt löschen </Delete>
 				<LayerList> Ebene Liste </LayerList>
 				<Mode> Umschalten des Anzeige- und Bearbeitungsmodus</Mode>
 				<SelectPolygon> Generiert ein Space-Objekt für ein geschlossenes Polygon </SelectPolygon>				
 				<Free>Leer</Free>
-			</IconPage_p5_8>		
+				<MoveSpaceObject>Raumobjekt verschieben</MoveSpaceObject>
+<ResizeSpaceObject>Größe des Raumobjekt ändern</ResizeSpaceObject>
+<MoveSpaceObject> Raumobjekt verschieben </MoveSpaceObject>
+<RotateSpaceObject> Raumobjekt drehen </RotateSpaceObject>	
+		</IconPage_p5_8>		
 			<IconPage_p6_1>
 				<PinMarker> Pin-Marker hinzufügen </PinMarker>
 			</IconPage_p6_1>
@@ -4139,6 +4373,9 @@
 				<NoQRCode> Aucun code QR reçu du serveur! </NoQRCode>
 				<DrawingName> Dessin: </DrawingName>
 <NotSpaceMode> Veuillez aller dans "Changer le mode d'affichage des objets d'espace" pour supprimer des espaces! </NotSpaceMode>
+				<TimeOut1>Alerte: il n'y a pas eu de réponse du serveur, sinon la conversion back-end est entrée dans une boucle inachevée, temps d'attente (</TimeOut1>
+				<TimeOut2>) sec. Veuillez charger un autre fichier.</TimeOut2>
+				<IdAlreadyUsed>REMARQUE: cet identifiant a déjà été utilisé, veuillez utiliser un autre identifiant.</IdAlreadyUsed>
 </InfoMessageModal>
 <InitSpaceObjects>
 <ModalModify> Objets spatiaux - Modifier les paramètres </ModalModify>
@@ -4162,7 +4399,10 @@
 				<RedlineFilename> Ligne rouge / Nom de fichier </RedlineFilename>
 				<EditRedlineInfo> Modifier les informations sur la ligne rouge </EditRedlineInfo>
 				<Upload> TÉLÉCHARGER </Upload>
-				</SaveRedlineModal>
+<HeaderSpace> CADViewer - Enregistrer l'objet spatial </HeaderSpace>
+<SpaceFilename> SPACE / FILENAME </SpaceFilename>
+<EditSpaceInfo> Modifier les informations sur l'espace </EditSpaceInfo>
+.				</SaveRedlineModal>
 				<OpenRedlineModal>
 				<Header> CADViewer - Ouvrir Redline </Header>
 				<RedlineFilename> Ligne rouge / Nom de fichier </RedlineFilename>
@@ -4253,6 +4493,8 @@
 				<Brown> Marron </Brown>
 				<Gray> Gris </Gray>
 				<OK> OK </OK>
+				<Transparent>Transparent</Transparent>
+				<Opacity>Opacité:</Opacity>				
 			</BackgroundColorModal>
 			<RedlineTextModal>
 				<Header> Texte rouge </Header>
@@ -4271,6 +4513,11 @@
 				<Distance> Distance: </Distance>
 				<OK> OK </OK>
 				<Text> Sélectionnez d'abord deux points dans le dessin avec la souris, puis entrez l'unité et la distance et appuyez sur OK </Text>
+				<TextObject>Sélectionnez d'abord une entité de chemin dans le dessin avec la souris, puis entrez l'unité et la distance et appuyez sur OK</TextObject>
+				<SelectPath>Sélectionnez le chemin</SelectPath>
+				<SelectPoints>Deux points</SelectPoints>
+				<Scalefac>Facteur d'échelle:</Scalefac>
+				<TextScale>Entrez l'unité et le facteur d'échelle et appuyez sur OK</TextScale>
 			</CalibrateModal>
 			<SettingsModal>
 				<Header> Paramètres généraux de CADViewer </Header>
@@ -4306,11 +4553,21 @@
 				<MenuItem> Plusieurs points (global) </MenuItem>
 				<MenuItem> Plusieurs points (SVG) </MenuItem>
 				<MenuItem> Chemin SVG </MenuItem>
+					<MenuItem>Longueur du trajet</MenuItem>
 				</MenuItems>
 				<Point> Point: </Point>
 				<Points> Points: </Points>
 				<PointText> Sélectionnez un seul point, capturez à partir du presse-papiers. </PointText>
 				<PointsText> Sélectionnez plusieurs points, capturez à partir du presse-papiers. </PointsText>
+				<PathText>Cliquez sur un chemin pour la longueur</PathText>
+				<PathLength>Longueur:</PathLength>
+				<Snap>Mode Snap:</Snap>
+				<SnapItems>
+					<SnapItem>Aucun</SnapItem> 
+					<SnapItem>Le plus proche</SnapItem>
+					<SnapItem>Point final</SnapItem>
+					<SnapItem>Point central</SnapItem>
+				</SnapItems>
 			</MeasurementModal>
 				<BirdsEyeModal>
 				<Header> Fenêtre à vol d'oiseau </Header>
@@ -4330,8 +4587,8 @@
 				<AllLayerOn> Calques activés </AllLayerOn>
 				<AllLayerOff> Désactivés </AllLayerOff>
 				<SwapLayers> Permuter </SwapLayers>
-				<On> Sur </On>
-				<Off> Hors </Off>
+				<On>OUI</On>
+				<Off>NON</Off>
 				<BaseAndXref> Dessin de base </BaseAndXref>
 				<Xref> Xref: </Xref>
 				</LayerListModal>			
@@ -4339,8 +4596,8 @@
 				<Header> Modifier la page de dessin </Header>
 				<Search> Recherche </Search>
 				<Sort> Trier par nom </Sort>
-				<On>Sur</On>
-				<Off>Hors</Off>
+				<On>OUI</On>
+				<Off>NON</Off>
 			</PageChangeListModal>
 			<LayerListSpaceModal>
 				<Header>Liste des calques - Objets spatiaux</Header>
@@ -4349,8 +4606,8 @@
 				<AllLayerOn> Calques activés </AllLayerOn>
 				<AllLayerOff> Désactivés </AllLayerOff>
 				<SwapLayers> Permuter </SwapLayers>
-				<On> Sur </On>
-				<Off> Hors </Off>
+				<On>OUI</On>
+				<Off>NON</Off>
 				<NotAssigned> Non attribué </NotAssigned>
 				<TextLayer> Calque de texte </TextLayer>
 				<RoomLayer> Couche de la pièce </RoomLayer>
@@ -4426,6 +4683,7 @@
 				<LoadLink> Charger tous les liens d'image </LoadLink>
 				<InsertLink> Insérer des liens d'image </InsertLink>
 				<SaveLink> Enregistrer tous les liens d'image </SaveLink>
+				<ClearLink>Effacer tous les liens d'image</ClearLink>
 				<QuickCount> Compte rapide </QuickCount>
 				<CountSum> Compte rapide récapitulatif </CountSum>
 				<ClearCount> Effacer le décompte rapide </ClearCount>
@@ -4455,6 +4713,7 @@
 				<DragSpaceImage> Faites glisser l'objet d'image d'espace </DragSpaceImage>
 				<ResizeSpaceImage> Redimensionner l'objet d'image d'espace </ResizeSpaceImage>
 				<LoadSpaceObjects> Charger des objets d'espace </LoadSpaceObjects>
+				<SaveSpaceObjects>Save Space Objects</SaveSpaceObjects>
 				<Publish> Afficher la structure des objets d'espace en mode d'affichage utilisateur </Publish>
 				<DownloadSVG> Télécharger le dessin SVG traité </DownloadSVG>
 				<Load> Charger le plan d'étage et prétraiter les objets spatiaux </Load>
@@ -4464,11 +4723,15 @@
 				<Polygon> Objet Espace Polygone </Polygon>
 				<Circle> Objet d'espace cercle </Circle>
 				<CopyCircle> Copier l'objet d'espace de cercle </CopyCircle>
+					<ClearSpaces>Effacer tous les espaces</ClearSpaces>
 				<Delete> Supprimer l'objet d'espace </Delete>
 				<LayerList> Liste des calques </LayerList>
 				<Mode> Activer / désactiver l'affichage des objets spatiaux et le mode d'édition </Mode>
 				<Free> Vide </Free>
 				<SelectPolygon> Générer un objet spatial sur un polygone fermé </SelectPolygon>
+<ResizeSpaceObject> Redimensionner l'objet spatial </ResizeSpaceObject>
+<MoveSpaceObject> Déplacer l'objet d'espace </MoveSpaceObject>
+<RotateSpaceObject> Faire pivoter l'objet spatial </RotateSpaceObject>
 			</IconPage_p5_8>		
 			<IconPage_p6_1>
 				<PinMarker> Ajouter un marqueur de broche </PinMarker>
@@ -4530,9 +4793,8 @@
 			<WaitModal>
 				<Printing> Impression </Printing>
 				<Thumbnails> Enregistrement </Thumbnails>
-				<BatchPDF> Imprimer au format PDF </BatchPDF>
+				<BatchPDF> Imprimer au PDF </BatchPDF>
 				<MergeDWG> Impression </MergeDWG>
 			</WaitModal>			
 	</languages>	
-</cvjs>		
-						
+</cvjs>	
