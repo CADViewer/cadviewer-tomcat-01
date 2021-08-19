@@ -216,7 +216,7 @@
 		</init-param>
 		<init-param>
 		<param-name>converterLocation</param-name>  
-		<param-value>C:/xampp/tomcat/webapps/cadviewer/converters/ax2020/windows/</param-value>    
+		<param-value>C:/xampp/tomcat/webapps/cadviewer/converters/ax2022/windows/</param-value>    
 		</init-param>
 		<init-param>	
 		<param-name>ax2020_executable</param-name>  
@@ -224,11 +224,11 @@
 		</init-param>
 		<init-param>
 		<param-name>licenseLocation</param-name>  
-		<param-value>/xampp/tomcat/webapps/cadviewer/converters/ax2020/windows/</param-value>    
+		<param-value>/xampp/tomcat/webapps/cadviewer/converters/ax2022/windows/</param-value>    
 		</init-param>
 		<init-param>
 		<param-name>xpathLocation</param-name>  
-		<param-value>/xampp/tomcat/webapps/cadviewer/converters/ax2020/windows/</param-value>    
+		<param-value>/xampp/tomcat/webapps/cadviewer/converters/ax2022/windows/</param-value>    
 		</init-param>
 		<init-param>
 		<param-name>callbackMethod</param-name>  
@@ -319,7 +319,7 @@
 		</init-param>
 		<init-param>
 		<param-name>converterLocation</param-name>  
-		<param-value>C:/xampp/tomcat/webapps/cadviewer/converters/ax2020/windows/</param-value>    
+		<param-value>C:/xampp/tomcat/webapps/cadviewer/converters/ax2022/windows/</param-value>    
 		</init-param>
 		<init-param>	
 		<param-name>ax2020_executable</param-name>  
@@ -327,11 +327,11 @@
 		</init-param>
 		<init-param>
 		<param-name>licenseLocation</param-name>  
-		<param-value>/xampp/tomcat/webapps/cadviewer/converters/ax2020/windows/</param-value>    
+		<param-value>/xampp/tomcat/webapps/cadviewer/converters/ax2022/windows/</param-value>    
 		</init-param>
 		<init-param>
 		<param-name>xpathLocation</param-name>  
-		<param-value>/xampp/tomcat/webapps/cadviewer/converters/ax2020/windows/</param-value>    
+		<param-value>/xampp/tomcat/webapps/cadviewer/converters/ax2022/windows/</param-value>    
 		</init-param>
 
     </servlet>
