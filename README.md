@@ -30,17 +30,17 @@ c:\xampp\tomcat\webapps
                │    ├── css
                │    └── user_resources	
                ├── converters
-               │    ├── ax2020
+               │    ├── ax2022
                │    │     ├── windows 
                │    │     │      └── fonts
                │    │     └── linux
                │    │            └── fonts
-               │    ├── dwgmerge2020
+               │    ├── dwgmerge2022
                │    │         ├── windows 
                │    │         │      └── fonts
                │    │         └── linux
                │    │            └── fonts
-               │    ├── linklist2020
+               │    ├── linklist2022
                │    │         ├── windows 
                │    │         │     └── fonts
                │    │         └── linux
@@ -55,8 +55,8 @@ c:\xampp\tomcat\webapps
 </pre>
 
 **1:** [Download](https://cadviewer.com/download/) and install **CADViewer** under this structure.  <br>
-**2:** [Download](https://cadviewer.com/download/) and install **AutoXchange 2020** under this structure. <br>
-**3:** Optionally, [Download](https://cadviewer.com/download/) and install **DwgMerge 2020** under this structure.
+**2:** [Download](https://cadviewer.com/download/) and install **AutoXchange 2022** under this structure. <br>
+**3:** Optionally, [Download](https://cadviewer.com/download/) and install **DwgMerge 2022** under this structure.
 
 
 ### WEB-INF Configuration
@@ -82,9 +82,7 @@ In folder /cadviewer/WEB-INF open and edit the file **web.xml**.
 
 Locate and change all CADViewer Servlets related  **&lt;param-name&gt; / &lt;param-value&gt;** pairs, so the paths and executable points properly to the values defined in your CADViewer installation structure. 
  
- 
-{{< gist CADViewer d212f01de7ec59808859bce489b4c992 "cadviewer_servlets_114.xml" >}}
- 
+  
 
 ### HTML 
 
@@ -99,27 +97,17 @@ c:\xampp\tomcat\webapps
 </pre>
 
 
-identify your sample mysample.html file, and ensure that it loads the CADViewer_ServletHandlerSettings.js file: 
-
-{{< gist CADViewer d4cebecdef292b0d8fff11aa4aa93e0c "cadviewer_servlets_115.html" >}}
-
-
-### Handler Settings JS File 
-
-**NOTE:** Under Linux replace **c:\xampp\tomcat\webapps** with **/var/lib/tomcat{X}**.
-
-In folder:
+identify your sample mysample.html file, and ensure the **ServerUrl** and **ServerLocation** variables points to the proper location on your structure:
 
 <pre style="line-height: 110%">
-c:\xampp\tomcat\webapps
-    └─── cadviewer
-            └── app
-                 └── cv
+
+ // Location of installation folders
+    var ServerBackEndUrl = "";
+    var ServerUrl = "http://localhost:8080/cadviewer/";
+    var ServerLocation = "c:/xampp/tomcat/webapps/cadviewer/";
 </pre>
 
-Open the CADViewer_ServerHandlerSettings.js file, and ensure that the top variable settings correspond to your server settings: 
 
-{{< gist CADViewer 56809904d84c6e3315c79dfe1a6b77c0 "cadviewer_servlets_116.js" >}}
 
 
 Open a web-browser pointing to your sample html file (any of the files in the /cadviewer/html/ folder): **http:/localhost:8080/cadviewer/html/mysample.html**
@@ -143,6 +131,4 @@ If drawing files does not display, this file will contain useful information to 
 
 One issue that often appears in installations is that interface icons do not display properly:
 
-![Icons](/cadviewertechdocs/images/missing_icons.png "Icons missing")
-
-Typically the variable ServerUrl in /cadviewer/app/cv/CADViewer_ServerHandlerSettings.js is not set to reflect the front-end server url or port.
+Typically the variable ServerUrl in /cadviewer/html/mysample.html is not set to reflect the front-end server url or port.
