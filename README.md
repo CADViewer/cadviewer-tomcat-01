@@ -112,7 +112,7 @@ identify your sample mysample.html file, and ensure the **ServerUrl** and **Serv
 
 Open a web-browser pointing to your sample html file (any of the files in the /cadviewer/html/ folder): **http:/localhost:8080/cadviewer/html/mysample.html**
 
-Use the server traces and browser development console for debugging, alternatively contact our [Support](/cadviewertechdocs/support/)  
+Use the server traces and browser development console for debugging, alternatively contact our [Support](https://cadviewer.com/cadviewertechdocs/support/)  
 
 **NOTE:** Under Linux replace **c:\xampp\tomcat\webapps** with **/var/lib/tomcat{X}**.
 
