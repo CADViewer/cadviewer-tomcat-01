@@ -24,7 +24,7 @@
 	<link href="../app/css/jquery-ui-1.11.4.min.css" media="screen" rel="stylesheet" type="text/css" />
 
 
-  <script src="../app/cv/cv-pro/cadviewer_6.5.17i.min.js" type="text/javascript" ></script> 
+  <script src="../app/cv/cv-pro/cadviewer_6.5.18a.min.js" type="text/javascript" ></script> 
 	<script src="../app/cv/cv-custom_commands/CADViewer_custom_commands.js" type="text/javascript" ></script>
 
 	<script src="../app/cv/cvlicense.js" type="text/javascript" ></script>
@@ -648,6 +648,16 @@ function cvjs_mouseenter(id, handle, entity){
 
 
 
+function test2(){
+
+	cvjs_setTopMenuXML("floorPlan", "cadviewer_no_redlinesave_02.xml", "/app/cv/cv-pro/menu_config/");
+	cvjs_regenerateTopIconMenuXML("floorPlan");
+
+}
+
+
+
+
 
  	</script>
 
@@ -672,6 +682,13 @@ function cvjs_mouseenter(id, handle, entity){
 		</p></td>
 	</tr>
 	</table>
+
+
+
+
+	<button class="w3-button demo" onClick="test2();">API test:change redline menu </button>
+	<br>
+	<br>
 
 
 
