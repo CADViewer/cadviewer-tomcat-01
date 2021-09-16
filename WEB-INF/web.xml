@@ -220,7 +220,7 @@
 		</init-param>
 		<init-param>	
 		<param-name>ax2020_executable</param-name>  
-		<param-value>AX2022_W64_22_07_55c.exe</param-value>    
+		<param-value>AX2022_W64_22_07_55f.exe</param-value>    
 		</init-param>
 		<init-param>
 		<param-name>licenseLocation</param-name>  
@@ -323,7 +323,7 @@
 		</init-param>
 		<init-param>	
 		<param-name>ax2020_executable</param-name>  
-		<param-value>AX2022_W64_22_07_55c.exe</param-value>    
+		<param-value>AX2022_W64_22_07_55f.exe</param-value>    
 		</init-param>
 		<init-param>
 		<param-name>licenseLocation</param-name>  
