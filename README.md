@@ -131,6 +131,7 @@ If drawing files does not display, this file will contain useful information to 
 
 One issue that often appears in installations is that interface icons do not display properly:
 
+![Icons](https://cadviewer.com/cadviewertechdocs/images/missing_icons.png "Icons missing")
 
 Typically the variables *ServerUrl*, *ServerLocation* or *ServerBackEndUrl* in the controlling **HTML**  document in ***/cadviewer/html/*** are not set to reflect the front-end server url or port.
 
