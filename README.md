@@ -131,4 +131,13 @@ If drawing files does not display, this file will contain useful information to 
 
 One issue that often appears in installations is that interface icons do not display properly:
 
-Typically the variable ServerUrl in /cadviewer/html/mysample.html is not set to reflect the front-end server url or port.
+
+Typically the variables *ServerUrl*, *ServerLocation* or *ServerBackEndUrl* in the controlling **HTML**  document in ***/cadviewer/html/*** are not set to reflect the front-end server url or port.
+
+<pre style="line-height: 110%">
+
+
+    var ServerBackEndUrl = "";  // or what is appropriate for my server; used for NodeJS server only
+    var ServerUrl = "http://localhost/cadviewer/";   // or what is appropriate for my server
+    var ServerLocation = "c:/xampp/htdocs/cadviewer/"; // or what is appropriate for my server
+</pre>
