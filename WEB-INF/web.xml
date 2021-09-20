@@ -252,7 +252,7 @@
 		</init-param>
 		<init-param>
 		<param-name>dwgmerge2020_executable</param-name>  
-		<param-value>DwgMerge_W32_20_01_07a.exe</param-value>    
+		<param-value>DwgMerge_W32_20_02_00b.exe</param-value>    
 		</init-param>
 
     </servlet>
