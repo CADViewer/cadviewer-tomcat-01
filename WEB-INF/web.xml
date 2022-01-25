@@ -156,6 +156,7 @@
 		<init-param>
 		<param-name>fileLocation</param-name>  
 		<param-value>c:\\xampp\\tomcat\\webapps\\cadviewer\\converters\\files\\</param-value>    
+<!--  <param-value>/opt/tomcat/apache-tomcat-9.0.58/webapps/cadviewer/converters/files/</param-value>-->
 		</init-param>
 		<init-param>
 		<param-name>fileLocationUrl</param-name>  
@@ -176,6 +177,7 @@
 		<init-param>
 		<param-name>fileLocation</param-name>  
 		<param-value>/xampp/tomcat/webapps/cadviewer/converters/files/</param-value>    
+<!--  <param-value>/opt/tomcat/apache-tomcat-9.0.58/webapps/cadviewer/converters/files/</param-value>-->
 		</init-param>
 		<init-param>
 		<param-name>fileLocationUrl</param-name>  
@@ -201,6 +203,7 @@
 		<init-param>
 		<param-name>ServerLocation</param-name>  
 		<param-value>/xampp/tomcat/webapps/cadviewer/</param-value>    
+<!--  <param-value>/opt/tomcat/apache-tomcat-9.0.58/webapps/cadviewer/</param-value>-->
 		</init-param>
 		<init-param>
 		<param-name>ServerUrl</param-name>  
@@ -209,6 +212,7 @@
 		<init-param>
 		<param-name>fileLocation</param-name>  
 		<param-value>/xampp/tomcat/webapps/cadviewer/converters/files/</param-value>    
+<!--  <param-value>/opt/tomcat/apache-tomcat-9.0.58/webapps/cadviewer/converters/files/</param-value>-->
 		</init-param>
 		<init-param>
 		<param-name>fileLocationUrl</param-name>  
@@ -217,18 +221,22 @@
 		<init-param>
 		<param-name>converterLocation</param-name>  
 		<param-value>C:/xampp/tomcat/webapps/cadviewer/converters/ax2022/windows/</param-value>    
+<!--  <param-value>/opt/tomcat/apache-tomcat-9.0.58/webapps/cadviewer/converters/ax2022/linux/</param-value>-->
 		</init-param>
 		<init-param>	
 		<param-name>ax2020_executable</param-name>  
-		<param-value>AX2022_W64_22_10_58a.exe</param-value>    
+		<param-value>AX2022_W64_22_12_65.exe</param-value>    
+<!--  <param-value>ax2022_L64_22_12_65</param-value>-->
 		</init-param>
 		<init-param>
 		<param-name>licenseLocation</param-name>  
 		<param-value>/xampp/tomcat/webapps/cadviewer/converters/ax2022/windows/</param-value>    
+<!--  <param-value>/opt/tomcat/apache-tomcat-9.0.58/webapps/cadviewer/converters/ax2022/linux/</param-value>-->
 		</init-param>
 		<init-param>
 		<param-name>xpathLocation</param-name>  
 		<param-value>/xampp/tomcat/webapps/cadviewer/converters/ax2022/windows/</param-value>    
+<!--  <param-value>/opt/tomcat/apache-tomcat-9.0.58/webapps/cadviewer/converters/ax2022/linux/</param-value>-->
 		</init-param>
 		<init-param>
 		<param-name>callbackMethod</param-name>  
@@ -249,10 +257,12 @@
  		<init-param>
 		<param-name>dwgmergeLocation</param-name>  
 		<param-value>c:\\xampp\\tomcat\\webapps\\cadviewer\\converters\\dwgmerge2020\\windows\\</param-value>    
+<!--  <param-value>/opt/tomcat/apache-tomcat-9.0.58/webapps/cadviewer/converters/dwgmerge2020/linux/</param-value>-->
 		</init-param>
 		<init-param>
 		<param-name>dwgmerge2020_executable</param-name>  
-		<param-value>DwgMerge_W32_20_02_00b.exe</param-value>    
+		<param-value>DwgMerge_W32_20_02_00b.exe</param-value> 
+<!--  <param-value>DwgMerge_2020_L64_20_01_08</param-value>-->
 		</init-param>
 
     </servlet>
@@ -316,22 +326,27 @@
 		<init-param>
 		<param-name>fileLocation</param-name>  
 		<param-value>/xampp/tomcat/webapps/cadviewer/converters/files/</param-value>    
+<!--  <param-value>/opt/tomcat/apache-tomcat-9.0.58/webapps/cadviewer/converters/files/</param-value>-->
 		</init-param>
 		<init-param>
 		<param-name>converterLocation</param-name>  
 		<param-value>C:/xampp/tomcat/webapps/cadviewer/converters/ax2022/windows/</param-value>    
+<!--  <param-value>/opt/tomcat/apache-tomcat-9.0.58/webapps/cadviewer/converters/ax2022/linux/</param-value>-->
 		</init-param>
 		<init-param>	
 		<param-name>ax2020_executable</param-name>  
-		<param-value>AX2022_W64_22_10_58a.exe</param-value>    
+		<param-value>AX2022_W64_22_12_65.exe</param-value>    
+<!--  <param-value>ax2022_L64_22_12_65</param-value>-->
 		</init-param>
 		<init-param>
 		<param-name>licenseLocation</param-name>  
 		<param-value>/xampp/tomcat/webapps/cadviewer/converters/ax2022/windows/</param-value>    
+<!--  <param-value>/opt/tomcat/apache-tomcat-9.0.58/webapps/cadviewer/converters/ax2022/linux/</param-value>-->
 		</init-param>
 		<init-param>
 		<param-name>xpathLocation</param-name>  
 		<param-value>/xampp/tomcat/webapps/cadviewer/converters/ax2022/windows/</param-value>    
+<!--  <param-value>/opt/tomcat/apache-tomcat-9.0.58/webapps/cadviewer/converters/ax2022/linux/</param-value>-->
 		</init-param>
 
     </servlet>
