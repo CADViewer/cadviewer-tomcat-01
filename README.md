@@ -1,7 +1,7 @@
 # cadviewer-tomcat-01
 implementation  structure of cadviewer-script-library using Servlets
 
-The repository contains a full setup of CADViewer with CAD Converters and script controllers for Servlets.  It must be installed under tomcat /webapps/cadviewer. 
+The repository contains a full setup of CADViewer with CAD Converters and script controllers for Servlets.  It must be installed under tomcat /webapps/cadviewer.   For war versions, please visit our [download site](https://cadviewer.com/download/).
 
 ## This package contains
 
@@ -23,10 +23,29 @@ The repository contains a full setup of CADViewer with CAD Converters and script
 Read the sections on installing and handling [Fonts](https://tailormade.com/ax2020techdocs/installation/fonts/) in [AutoXchange 2020 TechDocs](https://tailormade.com/ax2020techdocs/) and [TroubleShooting](https://tailormade.com/ax2020techdocs/troubleshooting/).
 
 
+## Install
+
+### Windows:  
+
+Use as is.
+
+### Linux:  
+
+In cadviewer/WEB-INF/web.xml, change all \<!-- --> settings strings for AX2022 executable, DwgMerge executable, and all cadviewer paths so they match the tomcat/webapps/ setting in Linux install environment.  
+
+Ensure ax2022_L64_xx_yy_zz has chmod 777 permissions.  
+
+Ensure /cadviewer/converters/files/ folder and all subfolders to this folder have full read and write permissions. 
+
+
+
 
 ## How to Use
 
 Once installed, open the HTML samples under /cadviewer/html/ can be run from a web-browser. Use http://localhost:xxxx/cadviewer/html/CADViewer_fileloader_670.html as a starting point (assuming that your have installed under http://localhost:xxxx).
+
+
+
 
 
 
@@ -40,7 +59,7 @@ Once installed, open the HTML samples under /cadviewer/html/ can be run from a w
 
 This repository should contain the latest converters, but in case you need to update any of the back-end converters please follow: 
 
-* [Download **AutoXchange**](/download/) (and other converters), install (unzip) AX2020 in **cadviewer/converters/ax2020/windows** or **cadviewer/converters/ax2020/linux** or in the designated folder structure.
+* [Download **AutoXchange**](/download/) (and other converters), install (unzip) AX2020 in **cadviewer/converters/ax2022/windows** or **cadviewer/converters/ax2022/linux** or in the designated folder structure.
 
 * Read the sections on installing and handling [Fonts](https://tailormade.com/ax2020techdocs/installation/fonts/) in [AutoXchange 2020 TechDocs](https://tailormade.com/ax2020techdocs/) and [TroubleShooting](https://tailormade.com/ax2020techdocs/troubleshooting/).
 
