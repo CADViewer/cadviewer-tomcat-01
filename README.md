@@ -25,9 +25,17 @@ Read the sections on installing and handling [Fonts](https://tailormade.com/ax20
 
 ## Install
 
-Windows:  Use as is.
+### Windows:  
 
-Linux:  In cadviewer/WEB-INF/web.xml, change all \<!-- --> settings strings for AX2022 executable, DwgMerge executable, and all cadviewer paths so they match the tomcat/webapps/ setting in Linux install environment.  Ensure ax2022_L64_xx_yy_zz has chmod 777 permissions.  Ensure /cadviewer/converters/files/ folder and subfolders have full read and write permissions. 
+Use as is.
+
+### Linux:  
+
+In cadviewer/WEB-INF/web.xml, change all \<!-- --> settings strings for AX2022 executable, DwgMerge executable, and all cadviewer paths so they match the tomcat/webapps/ setting in Linux install environment.  
+
+Ensure ax2022_L64_xx_yy_zz has chmod 777 permissions.  
+
+Ensure /cadviewer/converters/files/ folder and all subfolders to this folder have full read and write permissions. 
 
 
 
