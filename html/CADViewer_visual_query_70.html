@@ -57,7 +57,7 @@
 	// Location of installation folders
     var ServerBackEndUrl = "http://localhost:8080/cadviewer/";
     var ServerUrl = "http://localhost:8080/cadviewer/";
-    var ServerLocation = "";
+    var ServerLocation = "/xampp/tomcat/webapps/cadviewer/";
     
 	
 	
@@ -85,6 +85,7 @@
 		cvjs_allowFileLoadToServer(true);
 
 
+		cvjs_setCADViewerInterfaceVersion(6);
 			
 		// set the location to license key, typically the js folder in main app application folder ../app/js/
 		 cvjs_setLicenseKeyPath(ServerUrl+"/app/cv/");

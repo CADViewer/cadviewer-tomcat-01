@@ -56,7 +56,7 @@
 	// Location of installation folders
     var ServerBackEndUrl = "http://localhost:8080/cadviewer/";
     var ServerUrl = "http://localhost:8080/cadviewer/";
-    var ServerLocation = "";
+    var ServerLocation = "/xampp/tomcat/webapps/cadviewer/";
 
 
 	// PATH and FILE to be loaded, can be in formats DWG, DXF, DWF, SVG , JS, DGN, PCF, JPG, GIF, PNG
@@ -79,7 +79,8 @@
 		// uncomment if you want to use NodeJS cadviewer-conversion-server as backend
 		//cvjs_setHandlers_FrontEnd("NodeJS", "JavaScript", "floorPlan");
 		
-	
+		cvjs_setCADViewerInterfaceVersion(6);
+
 
 	
 

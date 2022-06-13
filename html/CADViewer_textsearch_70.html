@@ -56,7 +56,7 @@
 	// Location of installation folders
     var ServerBackEndUrl = "http://localhost:8080/cadviewer/";
     var ServerUrl = "http://localhost:8080/cadviewer/";
-    var ServerLocation = "";
+    var ServerLocation = "/xampp/tomcat/webapps/cadviewer/";
 
 
 	var FileName = ServerUrl + "/content/drawings/dwg/hq17_.dwg";	
@@ -75,7 +75,9 @@
 
 		cvjs_debugMode(true);
 		
-	
+		cvjs_setCADViewerInterfaceVersion(6);
+
+
 		// http://127.0.0.1:8081/html/CADViewer_json_610.html?drawing_name=/home/mydrawing.dgn&dgn_workspace=/home/workspace.txt&json_location=c:/nodejs/cadviewer/content/helloworld.json&print_modal_custom_checkbox=add_json
 
 		// IF CADVIEWER IS OPENED WITH A URL  http://localhost/cadviewer/html/CADViewer_sample_610.html?drawing_name=../content/drawings/dwg/hq17.dwg

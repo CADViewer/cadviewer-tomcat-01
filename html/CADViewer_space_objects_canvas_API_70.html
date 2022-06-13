@@ -57,7 +57,7 @@
 	// Location of installation folders
     var ServerBackEndUrl = "http://localhost:8080/cadviewer/";
     var ServerUrl = "http://localhost:8080/cadviewer/";
-    var ServerLocation = "";
+    var ServerLocation = "/xampp/tomcat/webapps/cadviewer/";
 
 	// PATH and FILE to be loaded, can be in formats DWG, DXF, DWF, SVG , JS, DGN, PCF, JPG, GIF, PNG	
 	var FileName = ServerUrl + "/content/drawings/dwg/one_of_simple.dwg";	
@@ -87,6 +87,10 @@
 		// Set CADViewer with full CADViewer Pro features
 		cvjs_CADViewerPro(true);
 		
+
+		cvjs_setCADViewerInterfaceVersion(6);
+
+
 
 		// IF CADVIEWER IS OPENED WITH A URL  http://localhost/cadviewer/html/CADViewer_sample_610.html?drawing_name=../content/drawings/dwg/hq17.dwg
 		//  or CADViewer_sample_610.html?drawing_name=http://localhost/cadviewer/content/drawings/dwg/hq17.dwg
