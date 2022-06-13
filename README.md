@@ -100,7 +100,7 @@ c:\xampp\tomcat\webapps
                │    │     │      └── fonts
                │    │     └── linux
                │    │            └── fonts
-               │    ├── dwgmerge2022
+               │    ├── dwgmerge2023
                │    │         ├── windows 
                │    │         │      └── fonts
                │    │         └── linux
@@ -120,8 +120,8 @@ c:\xampp\tomcat\webapps
 </pre>
 
 **1:** [Download](https://cadviewer.com/download/) and install **CADViewer** under this structure.  <br>
-**2:** [Download](https://cadviewer.com/download/) and install **AutoXchange 2022** under this structure. <br>
-**3:** Optionally, [Download](https://cadviewer.com/download/) and install **DwgMerge 2022** under this structure.
+**2:** [Download](https://cadviewer.com/download/) and install **AutoXchange 2023** under this structure. <br>
+**3:** Optionally, [Download](https://cadviewer.com/download/) and install **DwgMerge 2023** under this structure.
 
 
 ### WEB-INF Configuration
