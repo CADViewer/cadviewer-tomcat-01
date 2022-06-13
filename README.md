@@ -7,7 +7,7 @@ The repository contains a full setup of CADViewer with CAD Converters and script
 
 1: CADViewer Servlet script library  - in its preferred folder structure
 
-2: AutoXchange AX2022 Converter and DWG Merge 2022 Converter - in their preferred folder structure
+2: AutoXchange AX2023 Converter and DWG Merge 2023 Converter - in their preferred folder structure
 
 3: All structures for file-conversion, sample drawings, redlines, etc. 
 
@@ -31,9 +31,11 @@ Use as is.
 
 ### Linux:  
 
-In cadviewer/WEB-INF/web.xml, change all \<!-- --> settings strings for AX2022 executable, DwgMerge executable, and all cadviewer paths so they match the tomcat/webapps/ setting in Linux install environment.  
+In cadviewer/WEB-INF/web.xml, change all \<!-- --> settings strings for AX2023 executable, DwgMerge executable, and all cadviewer paths so they match the tomcat/webapps/ setting in Linux install environment.  
 
-Ensure ax2022_L64_xx_yy_zz has chmod 777 permissions.  
+Unpack the tar.gz file with ax2023 executable in /cadviewer/converters/ax2023/linux folder. 
+
+Ensure ax2023_L64_xx_yy_zz has chmod 777 permissions.  
 
 Ensure /cadviewer/converters/files/ folder and all subfolders to this folder have full read and write permissions. 
 
@@ -100,7 +102,7 @@ c:\xampp\tomcat\webapps
                │    │     │      └── fonts
                │    │     └── linux
                │    │            └── fonts
-               │    ├── dwgmerge2022
+               │    ├── dwgmerge2023
                │    │         ├── windows 
                │    │         │      └── fonts
                │    │         └── linux
@@ -120,8 +122,8 @@ c:\xampp\tomcat\webapps
 </pre>
 
 **1:** [Download](https://cadviewer.com/download/) and install **CADViewer** under this structure.  <br>
-**2:** [Download](https://cadviewer.com/download/) and install **AutoXchange 2022** under this structure. <br>
-**3:** Optionally, [Download](https://cadviewer.com/download/) and install **DwgMerge 2022** under this structure.
+**2:** [Download](https://cadviewer.com/download/) and install **AutoXchange 2023** under this structure. <br>
+**3:** Optionally, [Download](https://cadviewer.com/download/) and install **DwgMerge 2023** under this structure.
 
 
 ### WEB-INF Configuration
