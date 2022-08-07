@@ -225,7 +225,7 @@
 		</init-param>
 		<init-param>	
 		<param-name>ax2020_executable</param-name>  
-		<param-value>AX2023_W64_23_05_85.exe</param-value>    
+		<param-value>AX2023_W64_23_05_88.exe</param-value>    
 <!--  <param-value>ax2022_L64_22_12_65b</param-value>-->
 		</init-param>
 		<init-param>
@@ -335,7 +335,7 @@
 		</init-param>
 		<init-param>	
 		<param-name>ax2020_executable</param-name>  
-		<param-value>AX2023_W64_23_05_85.exe</param-value>    
+		<param-value>AX2023_W64_23_05_88.exe</param-value>    
 <!--  <param-value>ax2022_L64_22_12_65b</param-value>-->
 		</init-param>
 		<init-param>
