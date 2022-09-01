@@ -225,7 +225,7 @@
 		</init-param>
 		<init-param>	
 		<param-name>ax2020_executable</param-name>  
-		<param-value>AX2023_W64_23_05_88.exe</param-value>    
+		<param-value>AX2023_W64_23_05_89.exe</param-value>    
 <!--  <param-value>ax2022_L64_22_12_65b</param-value>-->
 		</init-param>
 		<init-param>
@@ -256,12 +256,12 @@
         <servlet-class>MergeDwgServlet</servlet-class>
  		<init-param>
 		<param-name>dwgmergeLocation</param-name>  
-		<param-value>c:\\xampp\\tomcat\\webapps\\cadviewer\\converters\\dwgmerge2020\\windows\\</param-value>    
+		<param-value>c:\\xampp\\tomcat\\webapps\\cadviewer\\converters\\dwgmerge2023\\windows\\</param-value>    
 <!--  <param-value>/opt/tomcat/apache-tomcat-9.0.58/webapps/cadviewer/converters/dwgmerge2020/linux/</param-value>-->
 		</init-param>
 		<init-param>
 		<param-name>dwgmerge2020_executable</param-name>  
-		<param-value>DwgMerge_W32_20_02_00b.exe</param-value> 
+		<param-value>DwgMerge2023_W32_23_01_01.exe</param-value> 
 <!--  <param-value>DwgMerge_2020_L64_20_01_08</param-value>-->
 		</init-param>
 
@@ -335,7 +335,7 @@
 		</init-param>
 		<init-param>	
 		<param-name>ax2020_executable</param-name>  
-		<param-value>AX2023_W64_23_05_88.exe</param-value>    
+		<param-value>AX2023_W64_23_05_89.exe</param-value>    
 <!--  <param-value>ax2022_L64_22_12_65b</param-value>-->
 		</init-param>
 		<init-param>
