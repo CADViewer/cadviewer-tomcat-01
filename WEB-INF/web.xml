@@ -56,11 +56,48 @@
 -->
 
 
+  <!-- BELOW Define servlets that are included in CADViewer application -->
 
-    <!-- BELOW Define servlets that are included in CADViewer application -->
+  <!-- NOTE:  Under Linux replace c:\xampp\tomcat\webapps with /var/lib/tomcat{X}.       -->
 
-    <!-- NOTE:  Under Linux replace c:\xampp\tomcat\webapps with /var/lib/tomcat{X}.       -->
- 
+<!--
+
+      <param-value>
+        default-src 'self'; 
+        script-src 'self' 'unsafe-eval' 'unsafe-inline'; 
+        style-src 'self' 'unsafe-inline'; 
+        img-src 'self' https://cadviewer.com data: ; 
+        form-action 'self'; 
+        base-uri 'self';
+        frame-ancestors 'self';
+      </param-value>
+
+  -->
+
+
+
+  <filter>
+    <filter-name>CspFilter</filter-name>
+    <filter-class>CspFilter</filter-class>
+    <init-param>
+      <param-name>csp</param-name>
+      <param-value>
+        default-src 'self'; 
+        script-src 'self' 'nonce-8IBTHwOdqNKAWeKl7plt8g=='; 
+        style-src 'self' 'unsafe-inline'; 
+        img-src 'self' https://cadviewer.com data: ; 
+        form-action 'self'; 
+        base-uri 'self';
+        frame-ancestors 'self';
+      </param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>CspFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+
 
    <servlet>
       <servlet-name>AppendServlet</servlet-name>
@@ -183,6 +220,13 @@
 		<param-name>fileLocationUrl</param-name>  
 		<param-value>http://localhost:8080/cadviewer/converters/files/</param-value>    
 		</init-param>
+		<init-param>
+		<param-name>ServerUrl</param-name>  
+		<param-value>http://localhost:8080/cadviewer/</param-value>    
+		</init-param>
+
+
+
 
     </servlet>
     
@@ -225,7 +269,7 @@
 		</init-param>
 		<init-param>	
 		<param-name>ax2020_executable</param-name>  
-		<param-value>AX2023_W64_23_05_89.exe</param-value>    
+		<param-value>AX2023_W64_23_08_93.exe</param-value>    
 <!--  <param-value>ax2022_L64_22_12_65b</param-value>-->
 		</init-param>
 		<init-param>
@@ -335,7 +379,7 @@
 		</init-param>
 		<init-param>	
 		<param-name>ax2020_executable</param-name>  
-		<param-value>AX2023_W64_23_05_89.exe</param-value>    
+		<param-value>AX2023_W64_23_08_93.exe</param-value>    
 <!--  <param-value>ax2022_L64_22_12_65b</param-value>-->
 		</init-param>
 		<init-param>
