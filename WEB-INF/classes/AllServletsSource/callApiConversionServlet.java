@@ -805,7 +805,11 @@ public final void doPost(HttpServletRequest request, HttpServletResponse respons
 		// 22-09-30
 		// whitespaces to %20
 		writeFile = writeFile.replaceAll("\\s","%20");
+		// 2022-10-24
+		fileLocation = fileLocation.replaceAll("\\s","%20");
+		licenseLocation = licenseLocation.replaceAll("\\s","%20");
 
+		
 
 		str_arr[1] =  "-i=\""+writeFile+"\"";
 		str_arr[2] =  "-o=\""+ fileLocation + tempFileName + "."+outputFormat+"\"";
@@ -849,6 +853,10 @@ public final void doPost(HttpServletRequest request, HttpServletResponse respons
 				else{
 					str_arr[4+i] = "-"+param_name[i]+"=\""+param_value[i]+"\"";
 				}
+
+				// 
+				str_arr[4+i] = str_arr[4+i].replaceAll("\\s","%20");
+
 
 
 				if (cvjs_debug){		
