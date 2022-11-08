@@ -27,10 +27,6 @@
     <display-name>Servlet and JSP Examples</display-name>
 
 
-
-	
-	
-	
 	
 <!-- Example filter mapping to apply the "Set Character Encoding" filter
      to *all* requests processed by this web application -->
@@ -269,8 +265,8 @@
 		</init-param>
 		<init-param>	
 		<param-name>ax2020_executable</param-name>  
-		<param-value>AX2023_W64_23_09_96.exe</param-value>    
-<!--  <param-value>ax2022_L64_23_09_96</param-value>-->
+		<param-value>AX2023_W64_23_10_99.exe</param-value>    
+<!--  <param-value>ax2022_L64_23_10_99</param-value>-->
 		</init-param>
 		<init-param>
 		<param-name>licenseLocation</param-name>  
@@ -379,8 +375,8 @@
 		</init-param>
 		<init-param>	
 		<param-name>ax2020_executable</param-name>  
-		<param-value>AX2023_W64_23_09_96.exe</param-value>    
-<!--  <param-value>ax2022_L64_23_09_96</param-value>-->
+		<param-value>AX2023_W64_23_10_99.exe</param-value>    
+<!--  <param-value>ax2022_L64_23_10_99</param-value>-->
 		</init-param>
 		<init-param>
 		<param-name>licenseLocation</param-name>  
@@ -413,14 +409,14 @@
 		
     <!-- ABOVE Define servlets that are included in CADViewerapplication -->
 
-
+<!--
     <jsp-config>
         <taglib>
 	    <taglib-uri>
 	       http://tomcat.apache.org/debug-taglib
 	    </taglib-uri>
 	    <taglib-location>
-	       /WEB-INF/jsp/debug-taglib.tld
+	       WEB-INF/jsp/debug-taglib.tld
 	    </taglib-location>
 	</taglib>
 
@@ -429,7 +425,7 @@
 	       http://tomcat.apache.org/examples-taglib
 	    </taglib-uri>
 	    <taglib-location>
-	       /WEB-INF/jsp/example-taglib.tld
+	       WEB-INF/jsp/example-taglib.tld
 	    </taglib-location>
 	</taglib>
 
@@ -438,7 +434,7 @@
 	       http://tomcat.apache.org/jsp2-example-taglib
 	    </taglib-uri>
 	    <taglib-location>
-	       /WEB-INF/jsp2/jsp2-example-taglib.tld
+	       WEB-INF/jsp2/jsp2-example-taglib.tld
 	    </taglib-location>
 	</taglib>
 
@@ -455,6 +451,9 @@
 	    <include-coda>/jsp/jsp2/misc/coda.jspf</include-coda>
 	</jsp-property-group>
     </jsp-config>
+
+-->
+
     
    <security-constraint>
       <display-name>Example Security Constraint</display-name>
