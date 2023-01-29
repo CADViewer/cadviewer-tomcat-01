@@ -13,7 +13,7 @@ The repository contains a full setup of CADViewer with CAD Converters and script
 
 4: A number of HTML files with CADViewer samples.
 
-5: The folder structure for Servlet script handlers for communication between CADViewer and the back-end AutoXchange 2022.
+5: The folder structure for Servlet script handlers for communication between CADViewer and the back-end AutoXchange 2023.
 
 
 ## This package does not contain
