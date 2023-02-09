@@ -13,7 +13,7 @@ The repository contains a full setup of CADViewer with CAD Converters and script
 
 4: A number of HTML files with CADViewer samples.
 
-5: The folder structure for Servlet script handlers for communication between CADViewer and the back-end AutoXchange 2022.
+5: The folder structure for Servlet script handlers for communication between CADViewer and the back-end AutoXchange 2023.
 
 
 ## This package does not contain
@@ -44,7 +44,7 @@ Ensure /cadviewer/converters/files/ folder and all subfolders to this folder hav
 
 ## How to Use
 
-Once installed, open the HTML samples under /cadviewer/html/ can be run from a web-browser. Use http://localhost:xxxx/cadviewer/html/CADViewer_fileloader_670.html as a starting point (assuming that your have installed under http://localhost:xxxx).
+Once installed, open the HTML samples under /cadviewer/html/ can be run from a web-browser. Use http://localhost:xxxx/cadviewer/html/CADViewer_fileloader_80.html as a starting point (assuming that your have installed under http://localhost:xxxx).
 
 
 
@@ -61,9 +61,9 @@ Once installed, open the HTML samples under /cadviewer/html/ can be run from a w
 
 This repository should contain the latest converters, but in case you need to update any of the back-end converters please follow: 
 
-* [Download **AutoXchange**](/download/) (and other converters), install (unzip) AX2020 in **cadviewer/converters/ax2022/windows** or **cadviewer/converters/ax2022/linux** or in the designated folder structure.
+* [Download **AutoXchange**](/download/) (and other converters), install (unzip) AX2023 in **cadviewer/converters/ax2023/windows** or **cadviewer/converters/ax2023/linux** or in the designated folder structure.
 
-* Read the sections on installing and handling [Fonts](https://tailormade.com/ax2020techdocs/installation/fonts/) in [AutoXchange 2020 TechDocs](https://tailormade.com/ax2020techdocs/) and [TroubleShooting](https://tailormade.com/ax2020techdocs/troubleshooting/).
+* Read the sections on installing and handling [Fonts](https://tailormade.com/ax2020techdocs/installation/fonts/) in [AutoXchange 2023 TechDocs](https://tailormade.com/ax2020techdocs/) and [TroubleShooting](https://tailormade.com/ax2020techdocs/troubleshooting/).
 
 * Try out the samples and build your own application!
  
