@@ -6298,20 +6298,27 @@ table.backgroundModalTable td {
 	width: 280px;
 	height: 20px; 
 	padding: 1px;
-    	top: 3px;
-    	bottom: 3px;
-    	z-index:1000;
-    	margin: 0px;
-    	text-indent: 1px;
-    	text-align:center;
+	z-index:1000;
+	margin: 0px;
+	text-indent: 1px;
+	text-align:center;
 	font-family: "Arial-BoldMT", Arial, Helvetica, sans-serif;
 	text-decoration: none;
 	font-weight: none;
 	color:#000000;
 	font-size: 12px;
 	line-height: 1;
+	max-height: 22px; /*  8.16.5 */
 		
 }
+
+
+
+#cvjs_publishPDFservername{
+	
+	max-height: 22px; /*  8.16.5 */		
+}
+
 
 
 
@@ -7397,9 +7404,13 @@ select_file_image\" id=\"select_file
 	top: 23px;
 	left: 8px;
 }
+
+
 .cvjs_controls_min li:hover {
     background: #d7d7d7;  
 }
+
+
 .cvjs_controls_min li {
     height: 30px ;
     width: 28px ;
@@ -7423,10 +7434,11 @@ select_file_image\" id=\"select_file
 	color: #999;
 }
 
+/*  8.25.3
 .cvjs_controls_min i:hover {
     background: #d7d7d7;  
 }
-
+*/
 
 .cvjs_controls_min li:first-child {
     border-top: none;
