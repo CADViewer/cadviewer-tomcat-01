@@ -106,9 +106,18 @@
     </servlet-mapping>
 
 
+
+<!--   8.56.4 update-->
    <servlet>
       <servlet-name>SaveServlet</servlet-name>
         <servlet-class>SaveServlet</servlet-class>
+
+		<init-param>
+		<param-name>ServerLocation</param-name>  
+		<param-value>/xampp/tomcat/webapps/cadviewer/</param-value>    
+<!--  <param-value>/opt/tomcat/apache-tomcat-9.0.58/webapps/cadviewer/converters/files/</param-value>-->
+		</init-param>
+
     </servlet>
     
     <servlet-mapping>

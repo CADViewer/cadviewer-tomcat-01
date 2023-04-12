@@ -184,7 +184,7 @@
 }
 
 #cvjs_tool_tip{
-	 position : absolute;
+	 position : absolute;  /* 8.32.2   */
 	 border : 1px solid gray;
 	 background-color : #efefef;
 	 color:#333;
@@ -1957,6 +1957,89 @@ input[type=button_layer] {
     min-height: 20px !important;
 
 }
+
+
+
+/* 8.46.4*/
+#cvjs_inputDocumentPageChange {
+	/* 7.3.14*/
+	position: absolute;
+	top: 36px;
+	left: 100px;
+	width: 40px;
+	height: 20px !important;
+	min-height: 20px !important;
+	padding: 0px !important;
+	z-index: 1000;
+	margin: 0px;
+	text-indent: 1px;
+	text-align: left;
+	font-family: "Arial-BoldMT", Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	font-weight: none;
+	color: #000000;
+	font-size: 12px;
+	line-height: 1;
+  }
+    
+  /*8.46.4 */
+  
+  #cvjs_documentPageChangeModal_changetext {
+	position: absolute;
+	top: 40px;
+	left: 16px;
+	z-index: 1000;
+	margin: 0px;
+	text-indent: 1px;
+	text-align: center;
+	font-family: "Arial-BoldMT", Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	font-weight: none;
+	color: #000000;
+	font-size: 13px;
+	line-height: 1;
+  }
+  
+  
+  /*8.46.4 */
+  #cvjs_documentPageChangeModal_button {
+	position: absolute;
+	width: 40px !important;
+	height: 20px !important;
+	min-height: 20px !important;
+	padding: 0px !important;
+	top: 36px;
+	left: 220px;
+	z-index: 1000;
+	margin: 0px;
+	text-indent: 1px;
+	text-align: center;
+	font-family: "Arial-BoldMT", Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	font-weight: bold;
+	color: #000000;
+	font-size: 12px;
+	line-height: 1;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* 7.3.38 */
@@ -4138,16 +4221,14 @@ table.thicknessModalTable td {
 
 .documentPageChangeModal{
 	/* 7.3.14*/
-
    	z-index:1000;
 	width: 280px; 
-	height: 67px;
+	height: 81px !important; /*8.46.1 */
 	border-radius: 3px;
 	background-color: #FFFFFF;
 	border: 2px solid gray;
 	position: absolute;
 	cursor:default;
-	
 
 }
 
@@ -4179,51 +4260,6 @@ table.documentPageChangeModalTable td {
 	border-left: 0px;	
 	padding: 0px !important;
 	vertical-align:top;
-
-}
-
-
-.cvjs_inputDocumentPageChangeModal{
-	/* 7.3.14*/
-
-
-	width: 40px;
-	height: 20px; 
-	padding: 1px;
-	top: 3px;
-	bottom: 3px;
-	z-index:1000;
-	margin: 0px;
-	text-indent: 1px;
-	text-align:center;
-	font-family: "Arial-BoldMT", Arial, Helvetica, sans-serif;
-	text-decoration: none;
-	font-weight: none;
-	color:#000000;
-	font-size: 12px;
-	line-height: 1;
-	 
-}
-
-
-#cvjs_documentPageChangeModal_button{
-
-	width: 40px;
-	height: 20px; 
-	padding: 1px;
-    	top: 3px;
-    	bottom: 3px;
-    	z-index:1000;
-    	margin: 0px;
-    	text-indent: 1px;
-    	text-align:center;
-	font-family: "Arial-BoldMT", Arial, Helvetica, sans-serif;
-	text-decoration: none;
-	font-weight: bold;
-	color:#000000;
-	font-size: 12px;
-	line-height: 1;
-	 
 
 }
 
@@ -4595,7 +4631,10 @@ table.compareModalTable td {
     	 left: 75px;
     	 top: 32px;
          min-height: 16px !important; /*7.3.26 */
-        }
+        
+		 cursor: pointer !important;  /*8.27.2 */
+
+}
 
 
 
@@ -4615,7 +4654,10 @@ table.compareModalTable td {
     	 left: 75px;
     	 top: 55px;
          min-height: 16px !important; /*7.3.26 */
-        }
+
+		 cursor: pointer !important;  /*8.27.2 */
+		
+}
 
 
 #cvjs_compare3{
@@ -4633,6 +4675,9 @@ table.compareModalTable td {
 		left: 75px;
 		top: 77px;
         min-height: 16px !important; /*7.3.26 */
+
+		cursor: pointer !important;  /*8.27.2 */
+
 }
 
 
@@ -6478,6 +6523,31 @@ table.adjustspaceobjectModalTable {
 }
 
 
+/*  8.44.1 */
+
+.colordarknessModalHeader{
+    z-index: 1100;
+	position:absolute;
+	top: 0px;
+	left: 0px;
+ 	width: 100%; 
+ 	height: 23px;
+ 	border-radius: 0px;
+ 	background-color: #DDDDDD;
+ 	margin-top: 0px;
+    border-bottom: 1px solid gray;
+	 
+	 font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	 font-size: 14px;
+	 /* line-height: 1.42857143; */
+	 color: #333
+ 
+}
+
+
+
+
+
 #lineThickness{
     position: absolute;
     top: 32px;
@@ -6485,6 +6555,46 @@ table.adjustspaceobjectModalTable {
 	max-height: 22px !important;  /* 8.9.6 */
 
 }
+
+
+/* 8.44.1 */
+
+#colorDarkness{
+    position: absolute;
+    top: 32px;
+    left: 200px;
+	max-height: 22px !important;  /* 8.9.6 */
+
+}
+
+
+
+/* 8.44.1 */
+
+
+.colordarknessModal{
+
+   	z-index:1000;
+	width: 328px; 
+	height: 102px;
+	border-radius: 3px;
+	background-color: #FFFFFF;
+	border: 2px solid gray;
+	position: absolute;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 13px;
+	 /* line-height: 1.42857143; */
+	 color: #333;
+     cursor:default;
+
+}
+
+
+
+
+
+
+
 
 
 .linethicknessModal{
@@ -6507,8 +6617,8 @@ table.adjustspaceobjectModalTable {
 }
 
 table.linethicknessModalTable {
-	width: 324px  ;
-	height: 198px ;
+	width: 320px  ;
+	height: 80px ;
    	z-index:1000;
 	padding: 0px !important;
 	border-spacing: 0px;
@@ -6541,12 +6651,96 @@ table.linethicknessModalTable td {
 
 }
 
+
+/* 8.44.1 */
+
+
+
+table.colordarknessModalTable {
+	width: 320px  ;
+	height: 80px ;
+   	z-index:1000;
+	padding: 0px !important;
+	border-spacing: 0px;
+	border-collapse: separate;
+	text-align: left;
+
+}
+
+table.colordarknessModalTable tr {
+	height: 22px ;
+	z-index:1010;
+	align-items: top;
+	text-align: left;
+
+}
+
+
+table.colordarknessModalTable td {
+    border-bottom: 0px !important;  /*7.3.17 */
+	height: 22px  !important;
+	background: #FFFFFF !important;
+	z-index:1010;
+	border: 0px solid gray;	
+	border-right: 0px;
+	border-left: 0px;	
+	padding: 0px !important;
+	vertical-align:top;
+	text-align: left;
+
+
+}
+
+
+
+
+
+
+
+
+
+
 #spaceobjectSize_ {
 
 	position: absolute;
 	top: 40px;
 	left: 180px;
 }
+
+
+
+/* 8.44.3  */
+
+.cvjs_inputColorDarknessModal{
+
+	width: 80px;
+	height: 20px; 	
+	min-height: 20px !important; 	
+	padding: 1px;
+    z-index:1000;
+    margin: 0px;
+    text-indent: 1px;
+    text-align:center;
+	font-family: "Arial-BoldMT", Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	font-weight: none;
+	color:#000000;
+	font-size: 12px;
+	line-height: 1;
+	 
+	position: absolute;
+	top: 40px;
+	left: 180px;
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -7393,16 +7587,17 @@ select_file_image\" id=\"select_file
 /* Controls to match new top icon menu 3.3.0   */
 
 .cvjs_controls_min {
-    position: absolute;
-    display: block;
+    /* position: absolute;   8.32.1 */
+    position: relative;  /*8.32.1 */
+	display: block;
     height: 123px ;  /* 123 remove important */   
 	width: 28px ;   /* 7.3.1 */
     z-index: 1000;
     border: 1px #999 solid;
     cursor: pointer;
     background: #f7f7f7; /* 99FF99; */
-	top: 23px;
-	left: 8px;
+	/* top: 23px;   8.28.1
+	left: 8px; */
 }
 
 
